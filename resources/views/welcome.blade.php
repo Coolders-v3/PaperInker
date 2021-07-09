@@ -78,7 +78,7 @@
                         </a>
                         @if (Route::has('register'))
                             <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">
-                                <button type="button" class="btn botones-home-index">Sign Up</button></a>
+                                <button type="button" class="btn botones-home-index">Register</button></a>
                         @endif
                     @endauth
                 
