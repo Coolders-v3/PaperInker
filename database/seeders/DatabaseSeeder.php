@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Illustrator;
 use Illuminate\Database\Seeder;
 use App\Models\Writer;
 
@@ -14,6 +15,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        Writer::factory(10)->create();
+        Writer::factory(5)->create();
+        Illustrator::factory(5)->create();
     }
 }
