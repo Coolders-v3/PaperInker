@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Writer extends Model
 {
     use HasFactory;
+
+    public function illustrators (){
+        return $this->belongsToMany(Illustrator::class); 
+    }
 }
