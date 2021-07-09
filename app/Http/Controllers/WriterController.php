@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Writers;
+use App\Models\Writer;
 use Illuminate\Http\Request;
 
-class WritersController extends Controller
+class WriterController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class WritersController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Writers  $writers
+     * @param  \App\Models\Writer  $writer
      * @return \Illuminate\Http\Response
      */
-    public function show(Writers $writers)
+    public function show(Writer $writer)
     {
         //
     }
@@ -52,10 +52,10 @@ class WritersController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Writers  $writers
+     * @param  \App\Models\Writer  $writer
      * @return \Illuminate\Http\Response
      */
-    public function edit(Writers $writers)
+    public function edit(Writer $writer)
     {
         //
     }
@@ -64,10 +64,10 @@ class WritersController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Writers  $writers
+     * @param  \App\Models\Writer $writer
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Writers $writers)
+    public function update(Request $request, Writer $writer)
     {
         //
     }
@@ -75,10 +75,10 @@ class WritersController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Writers  $writers
+     * @param  \App\Models\Writer $writer
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Writers $writers)
+    public function destroy(Writer $writer)
     {
         //
     }
