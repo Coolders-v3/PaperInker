@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Illustration extends Model
 {
     use HasFactory;
+
+    public function illustrator(){
+        return $this->belongsTo(Illustrator::class); 
+    }
 }

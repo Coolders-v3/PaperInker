@@ -13,4 +13,8 @@ class Illustrator extends Model
     public function writers (){
         return $this->belongsToMany(Writer::class); 
     }
+
+    public function illustrations (){
+        return $this->hasMany(Illustration::class); 
+    }
 }

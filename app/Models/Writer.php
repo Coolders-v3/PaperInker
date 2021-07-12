@@ -12,4 +12,8 @@ class Writer extends Model
     public function illustrators (){
         return $this->belongsToMany(Illustrator::class); 
     }
+
+    public function texts (){
+        return $this->hasMany(Text::class); 
+    }
 }

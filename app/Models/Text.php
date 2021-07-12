@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Text extends Model
 {
     use HasFactory;
+
+    public function writer(){
+        return $this->belongsTo(Writer::class); 
+    }
 }
