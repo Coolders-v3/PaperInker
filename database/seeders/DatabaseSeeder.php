@@ -2,9 +2,11 @@
 
 namespace Database\Seeders;
 
+use App\Models\Illustration;
 use App\Models\Illustrator;
 use Illuminate\Database\Seeder;
 use App\Models\Writer;
+use App\Models\User;
 
 class DatabaseSeeder extends Seeder
 {
@@ -17,5 +19,8 @@ class DatabaseSeeder extends Seeder
     {
         Writer::factory(5)->create();
         Illustrator::factory(5)->create();
+        Illustration::factory(5)->create();
+        User::factory(5)->create(['userType'=>'writer']);
+        User::factory(5)->create(['userType'=>'illustrator']);
     }
 }

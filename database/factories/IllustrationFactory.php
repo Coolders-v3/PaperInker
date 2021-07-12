@@ -2,19 +2,17 @@
 
 namespace Database\Factories;
 
-use App\Models\Writer;
+use App\Models\Illustration;
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Str;
 
-
-class WriterFactory extends Factory
+class IllustrationFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = Writer::class;
+    protected $model = Illustration::class;
 
     /**
      * Define the model's default state.
@@ -24,12 +22,10 @@ class WriterFactory extends Factory
     public function definition()
     {
         return [
-            'personaldescription' => $this->faker->text(),
-            'personalImage' => $this->faker->imageUrl(),
             'jobGenre' => $this->faker->name(),
             'title' => $this->faker->name(),
-            'jobText' => $this->faker->text(),
-            'yearOfCreation' => $this->faker->date(),             
+            'jobIllustration' => $this->faker->imageUrl(),
+            'yearOfCreation' => $this->faker->date()
         ];
     }
 }

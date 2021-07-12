@@ -15,11 +15,6 @@ class CreateWritersTable extends Migration
     {
         Schema::create('writers', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('nickName');
-            $table->string('email');
-            $table->string('password');
-            $table->string('confirmPassword');
             $table->string('personaldescription');
             $table->string('personalImage')->nullable();
             $table->string('jobGenre');
