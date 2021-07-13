@@ -23,6 +23,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('profileViews.writerProfile');
+        return view('profileViews.writerProfile'); //origanizar rutas
     }
 }
