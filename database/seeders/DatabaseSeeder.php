@@ -22,7 +22,6 @@ class DatabaseSeeder extends Seeder
         Text::factory(5)->create();
         Illustrator::factory(5)->create();
         Illustration::factory(5)->create();
-        User::factory(5)->create(['userType'=>'writer']);
-        User::factory(5)->create(['userType'=>'illustrator']);
+        User::factory()->create(['email'=>'usuario@gmail.com']);
     }
 }
