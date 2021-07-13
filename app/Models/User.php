@@ -49,9 +49,5 @@ class User extends Authenticatable
         return $this->hasOne(Illustrator::class); 
     }
 
-   /*  public function writerOrIllustrator(){
-        return $this->hasOne(Writer::class); 
-        return $this->hasOne(Illustrator::class); 
-    }
- */
+
 }
