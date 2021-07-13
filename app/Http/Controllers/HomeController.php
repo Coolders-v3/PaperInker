@@ -23,6 +23,10 @@ class HomeController extends Controller
      */
     public function index()
     {
+<<<<<<< HEAD
         return view('profileViews.writerProfile');
+=======
+        return view('profileViews.writerProfile'); //origanizar rutas
+>>>>>>> 0a2649bf02b64b308592c540a0f3d9e1c360f17e
     }
 }
