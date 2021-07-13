@@ -16,4 +16,8 @@ class Writer extends Model
     public function texts (){
         return $this->hasMany(Text::class); 
     }
+
+    public function user (){
+        return $this->belongsTo(User::class); 
+    }
 }

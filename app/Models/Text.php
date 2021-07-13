@@ -11,5 +11,9 @@ class Text extends Model
 
     public function writer(){
         return $this->belongsTo(Writer::class); 
+
+    
     }
+
+    
 }
