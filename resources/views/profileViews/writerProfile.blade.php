@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+@livewire('test-component')
   <section class="writerProfile">
     <div class="writerProfilePic">
       <figure>
