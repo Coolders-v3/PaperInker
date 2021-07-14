@@ -1212,7 +1212,7 @@
         <div class="contenedor-botones-home-index">
           @if (Route::has('login'))
             @auth
-              <a href="{{ url('/home') }}" class="text-sm text-gray-700 underline">Home</a>
+              <a href="{{ url('/home' ) }}" class="text-sm text-gray-700 underline">Home</a>
             @else
               <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">
                 <button type="button" class="btn botones-home-index">Login</button>

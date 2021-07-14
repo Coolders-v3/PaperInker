@@ -1,4 +1,4 @@
-{{-- <table class = "table">
+<table class = "table">
     <thead>
         <tr>
             <th>title</th>
@@ -21,4 +21,4 @@
         </tr>
         @endforeach
     </tbody>
-</table> --}}
+</table>

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Text;
+use App\Models\Illustration;
 use Illuminate\Http\Request;
 
 
@@ -26,7 +26,7 @@ class HomeController extends Controller
     
     public function index()
     {
-        $service = Text::all(); 
-        return view('profileViews.illustratorProfile', ["texts"=>$service]); //origanizar rutas
+      /*   $service = Illustration::all();
+        return view('profileViews.illustratorProfile', ["illustrations"=>$service]); */
     }
 }
