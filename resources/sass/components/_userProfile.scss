@@ -1,0 +1,51 @@
+body {
+  background-color: #E7E1F4;
+}
+
+.likeBtn,
+.crossBtn {
+  font-size: 42px;
+}
+
+.buttons {
+  position: fixed;
+  bottom: 25px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.profilePic {
+  margin: 0 10px 0 10px;
+  max-width: 100px;
+}
+
+.profilePic,
+.profilePic img {
+  max-width: 100px;
+}
+
+.profile {
+  display: flex;
+  padding: 20px 5px;
+}
+
+.description {
+  margin: 0 10px 0 10px;
+}
+
+.name {
+  font-weight: 700;
+}
+
+.samples {
+  margin-bottom: 12vh;
+  padding-left: 15px;
+  margin-top: 30px;
+  background-color: white;
+}
+
+.samples img {
+  max-width: 100%;
+}
