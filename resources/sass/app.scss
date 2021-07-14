@@ -1,11 +1,10 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
-
 // Variables
 @import 'variables';
-
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
-
 // Components
-@import 'components/writerProfile';
+@import 'components/userProfile';
+@import 'components/home-index';
+@import 'components/illustratorSamples';
