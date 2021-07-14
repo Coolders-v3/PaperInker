@@ -101,7 +101,6 @@
     </div>
   </article>
   <div class="buttons">
-    <span class="iconify likeBtn" data-icon="cil:heart" data-inline="false"></span>
-    <span class="iconify crossBtn" data-icon="emojione-monotone:cross-mark" data-inline="false"></span>
+    <span class="iconify createBtn" data-icon="ant-design:plus-circle-outlined" data-inline="false"></span>
   </div>
 @endsection
