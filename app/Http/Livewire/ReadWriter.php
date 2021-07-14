@@ -12,7 +12,7 @@ class ReadWriter extends Component
   use WithPagination;
 
   public $title, $genre, $year, $description;
-  
+
   public function render()
   {
     return view('livewire.read-writer', ["texts" => Text::orderBy('id', 'asc')->paginate(2)]);
@@ -25,7 +25,11 @@ class ReadWriter extends Component
     //return view('livewire.delete-writer');
   }
 
-  public function store()
+  public function createView() {
+    return view('livewire.create-writer');
+  }
+
+  /* public function store()
   {
     $this->validate([
       'title' => 'required',
@@ -40,5 +44,5 @@ class ReadWriter extends Component
       'year' => $this->year,
       'description' => $this->description
     ]);
-  }
+  } */
 }
