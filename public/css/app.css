@@ -10020,33 +10020,38 @@ body {
   justify-content: space-around;
 }
 
-.writerProfilePic {
+.profilePic {
   margin: 0 10px 0 10px;
   max-width: 100px;
 }
 
-.writerProfilePic,
-.writerProfilePic img {
+.profilePic,
+.profilePic img {
   max-width: 100px;
 }
 
-.writerProfile {
+.profile {
   display: flex;
+  padding: 20px 5px;
 }
 
-.writerDesc {
+.description {
   margin: 0 10px 0 10px;
 }
 
-.writerName {
+.name {
   font-weight: 700;
 }
 
-.writerSample {
+.samples {
   margin-bottom: 12vh;
   padding-left: 15px;
   margin-top: 30px;
   background-color: white;
+}
+
+.samples img {
+  max-width: 100%;
 }
 
 /* .color-body {
@@ -10086,3 +10091,49 @@ body {
     width: 129px;
     height: 50px;
 } */
+.sampleImg {
+  max-width: 150px;
+  border-top-right-radius: 18px;
+  overflow: hidden;
+  margin: 0px 10px;
+}
+
+.samples {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0px auto;
+  margin-bottom: 12vh;
+  padding-top: 20px;
+}
+
+.dropDownMenu {
+  position: relative;
+  bottom: 150px;
+  left: 122px;
+}
+
+.dropdown-toggle {
+  border: 0;
+  padding: 2px 6px 2px 6px;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 17px;
+  border-bottom-left-radius: 17px;
+}
+
+.dropdown-toggle::after {
+  content: none;
+}
+
+.imgMenuDots {
+  color: black;
+  font-size: 26px;
+}
+
+.btn-secondary:focus,
+.btn-secondary.focus {
+  box-shadow: none;
+}
