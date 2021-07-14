@@ -1,3 +1,5 @@
-<div>
-    <h1>Hola, componente de livewire</h1>
+<div class ="row">
+    <div class = "col-sm-9">
+        @include('livewire.crud')
+    </div>
 </div>

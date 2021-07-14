@@ -24,66 +24,13 @@
         </tr>
       </thead>
       <tbody>
+        @foreach ($texts as $text)
         <tr>
-          <td>Example Book 1</td>
-          <td>Comedy</td>          
-          <td>2015</td>
+          <td>{{ $text->title }}</td>
+          <td>{{ $text->jobGenre }}</td>          
+          <td>{{ $text->yearOfCreation }}</td>
         </tr>
-        <tr>
-          <td>Example Book 2</td>
-          <td>Thriller</td>          
-          <td>2016</td>
-        </tr>
-        <tr>
-          <td>Example Book 3</td>
-          <td>Romance</td>          
-          <td>2019</td>
-        </tr>
-        <tr>
-          <td>Example Book 1</td>
-          <td>Comedy</td>          
-          <td>2015</td>
-        </tr>
-        <tr>
-          <td>Example Book 2</td>
-          <td>Thriller</td>          
-          <td>2016</td>
-        </tr>
-        <tr>
-          <td>Example Book 3</td>
-          <td>Romance</td>          
-          <td>2019</td>
-        </tr>
-        <tr>
-          <td>Example Book 1</td>
-          <td>Comedy</td>          
-          <td>2015</td>
-        </tr>
-        <tr>
-          <td>Example Book 2</td>
-          <td>Thriller</td>          
-          <td>2016</td>
-        </tr>
-        <tr>
-          <td>Example Book 3</td>
-          <td>Romance</td>          
-          <td>2019</td>
-        </tr>
-        <tr>
-          <td>Example Book 1</td>
-          <td>Comedy</td>          
-          <td>2015</td>
-        </tr>
-        <tr>
-          <td>Example Book 2</td>
-          <td>Thriller</td>          
-          <td>2016</td>
-        </tr>
-        <tr>
-          <td>Example Book 3</td>
-          <td>Romance</td>          
-          <td>2019</td>
-        </tr>
+       @endforeach
       </tbody>
     </table>
   </article>
@@ -91,4 +38,6 @@
     <span class="iconify likeBtn" data-icon="cil:heart" data-inline="false"></span>
     <span class="iconify crossBtn" data-icon="emojione-monotone:cross-mark" data-inline="false"></span>
   </div>
+
 @endsection
+
