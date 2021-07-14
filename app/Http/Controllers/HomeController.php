@@ -26,7 +26,7 @@ class HomeController extends Controller
     
     public function index()
     {
-        $service = Text::all(); 
-        return view('profileViews.writerProfile', ["texts"=>$service]); //origanizar rutas
+        $texts = Text::all(); 
+        return view('profileViews.writerProfile', ["texts" => $texts]); //origanizar rutas
     }
 }

@@ -7,13 +7,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Text extends Model
 {
-    use HasFactory;
+  use HasFactory;
 
-    public function writer(){
-        return $this->belongsTo(Writer::class); 
+  protected $fillable = [
+    'title',
+    'genre',
+    'year',
+    'description'
+  ];
 
-    
-    }
-
-    
+  public function writer(){
+      return $this->belongsTo(Writer::class); 
+  }
 }
