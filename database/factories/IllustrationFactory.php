@@ -25,7 +25,7 @@ class IllustrationFactory extends Factory
             'jobGenre' => $this->faker->name(),
             'title' => $this->faker->name(),
             'jobIllustration' => $this->faker->imageUrl(),
-            'yearOfCreation' => $this->faker->date()
+            'yearOfCreation' => $this->faker->year()
         ];
     }
 }

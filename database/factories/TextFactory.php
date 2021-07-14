@@ -25,7 +25,7 @@ class TextFactory extends Factory
             'jobGenre' => $this->faker->name(),
             'title' => $this->faker->name(),
             'jobText' => $this->faker->text(),
-            'yearOfCreation' => $this->faker->date(),  
+            'yearOfCreation' => $this->faker->year(),  
         ];
     }
 }

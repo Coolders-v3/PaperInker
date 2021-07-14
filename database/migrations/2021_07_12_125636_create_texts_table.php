@@ -18,7 +18,7 @@ class CreateTextsTable extends Migration
             $table->string('jobGenre');
             $table->string('title');
             $table->string('jobText');
-            $table->date('yearOfCreation');
+            $table->year('yearOfCreation');
             $table->unsignedBigInteger('writer_id')->nullable();
             $table->foreign('writer_id')->references('id')->on('writers')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
