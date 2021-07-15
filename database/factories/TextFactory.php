@@ -13,11 +13,11 @@ class TextFactory extends Factory
     public function definition()
     {
         return [
-			'genre' => $this->faker->name,
-			'title' => $this->faker->name,
-			'description' => $this->faker->name,
-			'year' => $this->faker->name,
-			'writer_id' => $this->faker->name,
+			'genre' => $this->faker->name(),
+			'title' => $this->faker->name(),
+			'description' => $this->faker->name(),
+			'year' => $this->faker->year(),
+			
         ];
     }
 }
