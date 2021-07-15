@@ -14,70 +14,9 @@
       <tbody>
         @foreach ($texts as $text)
         <tr>
-<<<<<<< HEAD
           <td>{{ $text->title }}</td>
           <td>{{ $text->jobGenre }}</td>          
           <td>{{ $text->yearOfCreation }}</td>
-=======
-          <td>Example Book 1</td>
-          <td>Comedy</td>
-          <td>2015</td>
-        </tr>
-        <tr>
-          <td>Example Book 2</td>
-          <td>Thriller</td>
-          <td>2016</td>
-        </tr>
-        <tr>
-          <td>Example Book 3</td>
-          <td>Romance</td>
-          <td>2019</td>
-        </tr>
-        <tr>
-          <td>Example Book 1</td>
-          <td>Comedy</td>
-          <td>2015</td>
-        </tr>
-        <tr>
-          <td>Example Book 2</td>
-          <td>Thriller</td>
-          <td>2016</td>
-        </tr>
-        <tr>
-          <td>Example Book 3</td>
-          <td>Romance</td>
-          <td>2019</td>
-        </tr>
-        <tr>
-          <td>Example Book 1</td>
-          <td>Comedy</td>
-          <td>2015</td>
-        </tr>
-        <tr>
-          <td>Example Book 2</td>
-          <td>Thriller</td>
-          <td>2016</td>
-        </tr>
-        <tr>
-          <td>Example Book 3</td>
-          <td>Romance</td>
-          <td>2019</td>
-        </tr>
-        <tr>
-          <td>Example Book 1</td>
-          <td>Comedy</td>
-          <td>2015</td>
-        </tr>
-        <tr>
-          <td>Example Book 2</td>
-          <td>Thriller</td>
-          <td>2016</td>
-        </tr>
-        <tr>
-          <td>Example Book 3</td>
-          <td>Romance</td>
-          <td>2019</td>
->>>>>>> ddea73e6fee80cf819e6293f49f5f6bcee96077b
         </tr>
        @endforeach
       </tbody>

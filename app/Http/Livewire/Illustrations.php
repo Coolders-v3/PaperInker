@@ -36,11 +36,11 @@ class Illustrations extends Component
 	
     private function resetInput()
     {		
-		$this->jobGenre = null;
-		$this->title = null;
+		/* $this->jobGenre = null;
+		$this->title = null; */
 		$this->jobIllustration = null;
-		$this->yearOfCreation = null;
-		$this->illustrator_id = null;
+		/* $this->yearOfCreation = null;
+		$this->illustrator_id = null; */
     }
 
     public function store()
