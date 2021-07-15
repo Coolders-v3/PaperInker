@@ -1,5 +1,5 @@
 <div>
-    <article class="samples">
+  <article class="samples">
     <table class="table table-sm">
       <thead>
         <tr>
@@ -11,19 +11,19 @@
       </thead>
       <tbody>
         @foreach ($texts as $text)
-        <tr>
-          <td>{{ $text->title }}</td>
-          <td>{{ $text->jobGenre }}</td>          
-          <td>{{ $text->yearOfCreation }}</td>
-          <td><button wire:click="destroy({{$text->id}})" class="btn btn-danger">DELETE</button></td>
-        </tr>
+          <tr>
+            <td>{{ $text->title }}</td>
+            <td>{{ $text->jobGenre }}</td>
+            <td>{{ $text->yearOfCreation }}</td>
+            <td><button wire:click="destroy({{ $text->id }})" class="btn btn-danger">DELETE</button></td>
+          </tr>
         @endforeach
-      
+
       </tbody>
     </table>
-    </article>
+  </article>
 
-    {{-- <div>
+  {{-- <div>
       <form class="form-group">        
         <input wire:model="title" class="form-control mb-3 mt-3" type="text" placeholder="Title" aria-label="default input example">
         @error('title') <span> {{ $message }} </span> @enderror
@@ -41,9 +41,10 @@
       </form>
     </div> --}}
 
-   {{--  {{ $texts -> links() }} --}}
+  {{-- {{ $texts -> links() }} --}}
 </div>
 
 <div class="buttons">
-  <a href="{{ url('/create') }}"><span  class="iconify createBtn" data-icon="ant-design:plus-circle-outlined" data-inline="false"></span></a>
+  <a href="{{ url('/create') }}"><span class="iconify createBtn" data-icon="ant-design:plus-circle-outlined"
+      data-inline="false"></span></a>
 </div>
