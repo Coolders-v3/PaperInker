@@ -33,14 +33,14 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-					@auth()
+{{-- 					@auth()
                     <ul class="navbar-nav mr-auto">
 						<!--Nav Bar Hooks - Do not delete!!-->
 						<li class="nav-item">
                             <a href="{{ url('/texts') }}" class="nav-link"><i class="fab fa-laravel text-info"></i> Texts</a> 
                         </li>
                     </ul>
-					@endauth()
+					@endauth() --}}
 					
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
