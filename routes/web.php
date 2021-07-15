@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\ReadWriter;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,8 +21,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/create', [ReadWriter::class, 'createView'])->name('create');
 Route::post('/', [ReadWriter::class, 'store'])->name('store');
 //Route Hooks - Do not delete//
-	Route::view('texts', 'livewire.texts.index')->middleware('auth');
+	Route::view('/home', 'livewire.texts.index')->middleware('auth');
