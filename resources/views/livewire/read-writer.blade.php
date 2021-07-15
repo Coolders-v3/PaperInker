@@ -41,7 +41,7 @@
       </form>
     </div> --}}
 
-    {{ $texts -> links() }}
+   {{--  {{ $texts -> links() }} --}}
 </div>
 
 <div class="buttons">
