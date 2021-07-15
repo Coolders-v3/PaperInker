@@ -1,10 +1,9 @@
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
-// Variables
 @import 'variables';
-// Bootstrap
+
 @import '~bootstrap/scss/bootstrap';
-// Components
-@import 'components/userProfile';
-@import 'components/home-index';
-@import 'components/illustratorSamples';
+
+@import '~@fortawesome/fontawesome-free/css/all.css';
+
+@import '../css/app.css';
+
+@import '~sweetalert2/src/sweetalert2.scss';
