@@ -23,3 +23,5 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/create', [ReadWriter::class, 'createView'])->name('create');
 Route::post('/', [ReadWriter::class, 'store'])->name('store');
+//Route Hooks - Do not delete//
+	Route::view('texts', 'livewire.texts.index')->middleware('auth');
