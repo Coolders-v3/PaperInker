@@ -71,11 +71,11 @@
 
                         <div class="form-check-container">
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                <input class="form-check-input" type="radio" name="userType" id="writer" value="option1">
                                 <label class="form-check-label" for="inlineRadio1">I'm a writter</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                <input class="form-check-input" type="radio" name="userType" id="inlineRadio2" value="option2">
                                 <label class="form-check-label" for="inlineRadio2">I'm an illustrator</label>
                             </div>
                             
