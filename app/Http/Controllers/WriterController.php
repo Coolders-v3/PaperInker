@@ -1,9 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
+namespace App\Http\Controllers\Auth;
 
 use App\Models\Writer;
 use Illuminate\Http\Request;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class WriterController extends Controller
 {
@@ -14,7 +17,7 @@ class WriterController extends Controller
      */
     public function index()
     {
-        //
+       
     }
 
     /**
@@ -22,10 +25,13 @@ class WriterController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    protected function create()
     {
         //
     }
+          
+          
+            
 
     /**
      * Store a newly created resource in storage.
@@ -33,10 +39,10 @@ class WriterController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store()
     {
-        //
-    }
+    
+    } 
 
     /**
      * Display the specified resource.

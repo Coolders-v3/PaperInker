@@ -17,7 +17,7 @@ class CreateIllustratorsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id')->nullable();
             // $table->primary('user_id'); para que un user no pueda tener dos perfiles
-            $table->string('personaldescription');
+            $table->string('personaldescription')->nullable();
             $table->string('personalImage')->nullable();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();

@@ -5,6 +5,9 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use Livewire\WithPagination;
 use App\Models\Text;
+use App\Models\User;
+use App\Models\Writer;
+use Illuminate\Support\Facades\Auth;
 
 class Texts extends Component
 {
@@ -57,7 +60,7 @@ class Texts extends Component
 			'title' => $this-> title,
 			'description' => $this-> description,
 			'year' => $this-> year,
-			'writer_id' => $this-> writer_id
+			'writer_id' => Writer::find(Auth::id())->id
         ]);
         
         $this->resetInput();

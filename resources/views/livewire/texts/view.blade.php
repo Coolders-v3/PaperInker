@@ -32,8 +32,9 @@
 								<td>ACTIONS</td>
 							</tr>
 						</thead>
+					
 						<tbody>
-							@foreach($texts as $row)
+							@foreach($texts as $row){{--  ($myList as $event) --}}
 							<tr>
 								<td>{{ $row->title }}</td>
 								<td>{{ $row->genre }}</td>

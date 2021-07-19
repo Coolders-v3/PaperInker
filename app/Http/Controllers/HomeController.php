@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\Text;
 use Illuminate\Http\Request;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
+use App\Models\Writer;
+use App\Models\Illustrator;
 
 
 class HomeController extends Controller
@@ -26,6 +30,15 @@ class HomeController extends Controller
     
     public function index()
     {
-        return view('home'); //origanizar rutas
+        $service = Text::all(); 
+        
+        if (User::find(Auth::id())->isWriter == true) {
+
+            Writer::create(['user_id' => User::find(Auth::id())->id]);
+            return view('profileViews.writerProfile', ["texts"=>$service]);
+        }
+
+            Illustrator::create(['user_id' => User::find(Auth::id())->id]);
+            return view('profileViews.illustratorProfile', ["texts"=>$service]); //origanizar rutas
     }
 }
