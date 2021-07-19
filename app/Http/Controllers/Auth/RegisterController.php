@@ -83,8 +83,23 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'isWriter' => $data['isWriter']
-            ]);         
+            ]);
             
-    }
+            
+            }
+            
+            public function createProfile() {
+        
+                if (User::find(Auth::id())->isWriter == true) {
+        
+                        return Writer::create(['user_id' => User::find(Auth::id())->id]);
+                        //return view('profileViews.writerProfile', ["texts"=>$service]);
+                    }
+            
+                        return Illustrator::create(['user_id' => User::find(Auth::id())->id]);
+                       // return view('profileViews.illustratorProfile', ["texts"=>$service]); //origanizar rutas
+                               
+            }
+   
  
 }

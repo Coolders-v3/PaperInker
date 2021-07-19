@@ -18,7 +18,9 @@ class Texts extends Component
     public $updateMode = false;
 
     public function render()
-    {
+
+    {   
+        
 		$keyWord = '%'.$this->keyWord .'%';
         return view('livewire.texts.view', [
             'texts' => Text::latest()
@@ -54,7 +56,8 @@ class Texts extends Component
 		'description' => 'required',
 		'year' => 'required',
         ]);
-
+        
+        
         Text::create([ 
 			'genre' => $this-> genre,
 			'title' => $this-> title,
@@ -114,4 +117,17 @@ class Texts extends Component
             $record->delete();
         }
     }
+
+   /*  public function createProfile() {
+        if (User::find(Auth::id())->isWriter == true) {
+
+            return Writer::create(['user_id' => User::find(Auth::id())->id]);
+            //return view('profileViews.writerProfile', ["texts"=>$service]);
+        }
+
+            return Illustrator::create(['user_id' => User::find(Auth::id())->id]);
+           // return view('profileViews.illustratorProfile', ["texts"=>$service]); //origanizar rutas
+                   
+} */
+    
 }

@@ -3,10 +3,6 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use App\Models\User;
-use App\Models\Writer;
-use App\Models\Illustrator;
-use Illuminate\Support\Facades\Auth;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -17,8 +13,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        
-       
+        //
     }
 
     /**

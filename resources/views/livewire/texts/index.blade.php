@@ -4,7 +4,8 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             @livewire('texts')
-        </div>     
+        </div>
+           
     </div>   
 </div>
 @endsection
