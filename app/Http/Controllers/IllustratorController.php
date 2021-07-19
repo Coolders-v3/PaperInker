@@ -22,9 +22,13 @@ class IllustratorController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(array $data)
     {
-        //
+        return Illustrator::create([
+
+            'personaldescription' => 'personaldescription',
+            'personalImage' => 'personalImage'
+        ]);
     }
 
     /**

@@ -9,6 +9,13 @@ class Writer extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'user_id'
+    ];
+    public function user (){
+        return $this->belongsTo(User::class); 
+    }
+   
     public function illustrators (){
         return $this->belongsToMany(Illustrator::class); 
     }
@@ -17,7 +24,5 @@ class Writer extends Model
         return $this->hasMany(Text::class); 
     }
 
-    public function user (){
-        return $this->belongsTo(User::class); 
-    }
+    
 }

@@ -1,9 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
+namespace App\Http\Controllers\Auth;
 
 use App\Models\Writer;
 use Illuminate\Http\Request;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class WriterController extends Controller
 {
@@ -14,7 +17,7 @@ class WriterController extends Controller
      */
     public function index()
     {
-        //
+       
     }
 
     /**
@@ -22,10 +25,32 @@ class WriterController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    protected function create()
     {
-        //
+       /*  new Writer;/* $loggedUserId = User::find(Auth::id());
+        $writer = new Writer;
+        $loggedUserId = User::find(Auth::id());
+        $writer = Writer::find($id);
+        return $writer->user($loggedUserId); */
+        //dd($loggedUserId);
+       
+       // Writer::store($id);
+       /*return Writer::create([
+
+            'user_id'=> $writer->user()->attach($loggedUserId),
+            'personaldescription' => 'personaldescription',
+            'personalImage' => 'personalImage'
+        ]); */
     }
+          
+          
+           
+         /*    Writer::find($id);
+            dd($loggedUserId);  */
+            /* Writer::find($id);
+            return $writer->user()->attach($loggedUserId); */
+          
+            
 
     /**
      * Store a newly created resource in storage.
@@ -33,10 +58,13 @@ class WriterController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store($id)
     {
-        //
-    }
+        $loggedUserId = User::find(Auth::id());
+        $writer = Writer::find($id);
+        $writer->attach($loggedUserId);
+        dd($loggedUserId);
+    } 
 
     /**
      * Display the specified resource.
