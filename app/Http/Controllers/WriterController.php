@@ -27,28 +27,9 @@ class WriterController extends Controller
      */
     protected function create()
     {
-       /*  new Writer;/* $loggedUserId = User::find(Auth::id());
-        $writer = new Writer;
-        $loggedUserId = User::find(Auth::id());
-        $writer = Writer::find($id);
-        return $writer->user($loggedUserId); */
-        //dd($loggedUserId);
-       
-       // Writer::store($id);
-       /*return Writer::create([
-
-            'user_id'=> $writer->user()->attach($loggedUserId),
-            'personaldescription' => 'personaldescription',
-            'personalImage' => 'personalImage'
-        ]); */
+        //
     }
           
-          
-           
-         /*    Writer::find($id);
-            dd($loggedUserId);  */
-            /* Writer::find($id);
-            return $writer->user()->attach($loggedUserId); */
           
             
 
@@ -58,12 +39,9 @@ class WriterController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store($id)
+    public function store()
     {
-        $loggedUserId = User::find(Auth::id());
-        $writer = Writer::find($id);
-        $writer->attach($loggedUserId);
-        dd($loggedUserId);
+    
     } 
 
     /**

@@ -52,11 +52,5 @@ class User extends Authenticatable
         return $this->hasOne(Illustrator::class); 
     }
 
-   /*  public function findUserId() {
-
-        $loggedUserId = User::Auth->id;
-        return $loggedUserId;
-    } */
-
 
 }

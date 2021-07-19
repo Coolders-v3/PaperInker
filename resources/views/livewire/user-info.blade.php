@@ -8,7 +8,6 @@
         >
       </figure>
       <span class="name">Writer's Name</span>
-      <button> vincular con user</button>
     </div>
     <p class="description">
       Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been

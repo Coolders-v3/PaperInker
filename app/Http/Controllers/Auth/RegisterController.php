@@ -57,14 +57,6 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
-
-         /*  $loggedUserId = User::find(Auth::id());
-            dd($loggedUserId); */
-            /* $writer = new Writer;
-            Writer::find($id);
-            dd($loggedUserId); */
-            /* Writer::find($id);
-            return $writer->user()->attach($loggedUserId); */
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
             'nickname' => ['required', 'string', 'max:255'],
@@ -90,21 +82,8 @@ class RegisterController extends Controller
             'nickname' => $data['nickname'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
-            'isWriter' => $data['isWriter']/* , Writer::create() && Illustrator::create()  */ /* , $writer::find()->user()->attach($loggedUserId) && Illustrator::create() */
-            ]); 
-            
-            
-           /*  $user = User::find(Auth::id());
-            return Writer::create()->store; */
-            
-            //->user()->save($user);
-
-            /* $loggedUserId = User::find();
-            $writer = Writer::create();
-            $writer::find(Auth())->user()->attach($loggedUserId) &&  *///Illustrator::create();
-        
-       
-            
+            'isWriter' => $data['isWriter']
+            ]);         
             
     }
  

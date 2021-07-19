@@ -10,6 +10,10 @@ class Illustrator extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'user_id'
+    ];
+    
     public function writers (){
         return $this->belongsToMany(Writer::class); 
     }
