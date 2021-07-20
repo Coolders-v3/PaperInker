@@ -18,10 +18,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        Writer::factory(5)->create();
-        Text::factory(10)->create();
-        Illustrator::factory(5)->create();
-        Illustration::factory(5)->create();
+        //Writer::factory(5)->create();
+        //Text::factory(10)->create();
+        //Illustrator::factory(5)->create();
+        //Illustration::factory(5)->create();
         User::factory()->create(['email'=>'usuario@gmail.com']);
     }
 }

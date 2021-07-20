@@ -89,7 +89,7 @@ class RegisterController extends Controller
             
             }
             
-            public function createProfile() {
+    protected function createProfile() {
         
                 if (User::find(Auth::id())->isWriter == true) {
         

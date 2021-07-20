@@ -5,6 +5,9 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use Livewire\WithPagination;
 use App\Models\Illustration;
+use App\Models\User;
+use App\Models\Illustrator;
+use Illuminate\Support\Facades\Auth;
 
 class Illustrations extends Component
 {
@@ -49,7 +52,7 @@ class Illustrations extends Component
 		'jobGenre' => 'required',
 		'title' => 'required',
 		'jobIllustration' => 'required',
-		'yearOfCreation' => 'required',
+		'yearOfCreation' => 'required'
         ]);
 
         Illustration::create([ 
@@ -57,7 +60,7 @@ class Illustrations extends Component
 			'title' => $this-> title,
 			'jobIllustration' => $this-> jobIllustration,
 			'yearOfCreation' => $this-> yearOfCreation,
-			'illustrator_id' => $this-> illustrator_id
+			'illustrator_id' => Illustrator::find(Auth::id())->id
         ]);
         
         $this->resetInput();

@@ -48,7 +48,7 @@
                             @endforeach
                         </tbody>
                     </table>                        
-                    {{ $texts->links() }}
+                   {{ $texts->links() }}
                     </div>
                 </div>
             </div>

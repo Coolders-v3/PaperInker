@@ -15,12 +15,13 @@ class Illustration extends Model
 
     protected $fillable = ['jobGenre','title','jobIllustration','yearOfCreation','illustrator_id'];
 	
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasOne
-     */
+    
+    
     public function illustrator()
     {
         return $this->belongsTo(Illustrator::class); 
     }
-    
+    /**
+      * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
 }
