@@ -20,7 +20,7 @@ class Illustration extends Model
      */
     public function illustrator()
     {
-        return $this->hasOne('App\Models\Illustrator', 'id', 'illustrator_id');
+        return $this->belongsTo(Illustrator::class); 
     }
     
 }

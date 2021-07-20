@@ -41,7 +41,6 @@ class Texts extends Component
         $this->resetInput();
         $this->updateMode = false;
     }
-<<<<<<< HEAD
 	
     private function resetInput()
     {		
@@ -114,68 +113,6 @@ class Texts extends Component
         }
     }
 
-=======
-    private function resetInput()
-    {       
-        $this->genre = null;
-        $this->title = null;
-        $this->description = null;
-        $this->year = null;
-        $this->writer_id = null;
-    }
-    public function store()
-    {
-        $this->validate([
-        'genre' => 'required',
-        'title' => 'required',
-        'description' => 'required',
-        'year' => 'required',
-        ]);
-        Text::create([ 
-            'genre' => $this-> genre,
-            'title' => $this-> title,
-            'description' => $this-> description,
-            'year' => $this-> year,
-            'writer_id' => $this-> writer_id
-        ]);
-        $this->resetInput();
-        $this->emit('closeModal');
-        session()->flash('message', 'Text Successfully created.');
-    }
-    public function edit($id)
-    {
-        $record = Text::findOrFail($id);
-        $this->selected_id = $id; 
-        $this->genre = $record-> genre;
-        $this->title = $record-> title;
-        $this->description = $record-> description;
-        $this->year = $record-> year;
-        $this->writer_id = $record-> writer_id;
-        $this->updateMode = true;
-    }
-    public function update()
-    {
-        $this->validate([
-        'genre' => 'required',
-        'title' => 'required',
-        'description' => 'required',
-        'year' => 'required',
-        ]);
-        if ($this->selected_id) {
-            $record = Text::find($this->selected_id);
-            $record->update([ 
-            'genre' => $this-> genre,
-            'title' => $this-> title,
-            'description' => $this-> description,
-            'year' => $this-> year,
-            'writer_id' => $this-> writer_id
-            ]);
-            $this->resetInput();
-            $this->updateMode = false;
-            session()->flash('message', 'Text Successfully updated.');
-        }
-    }
->>>>>>> 20113d278e904a417781e38fbd2224bcbd0fe53d
     public function destroy($id)
     {
         if ($id) {
@@ -183,7 +120,6 @@ class Texts extends Component
             $record->delete();
         }
     }
-<<<<<<< HEAD
 
    /*  public function createProfile() {
         if (User::find(Auth::id())->isWriter == true) {
@@ -197,6 +133,4 @@ class Texts extends Component
                    
 } */
     
-=======
->>>>>>> 20113d278e904a417781e38fbd2224bcbd0fe53d
 }
