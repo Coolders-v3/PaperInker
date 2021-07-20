@@ -8,16 +8,15 @@ use Illuminate\Support\Str;
 
 class IllustrationFactory extends Factory
 {
-    protected $model = Illustration::class;
+  protected $model = Illustration::class;
 
-    public function definition()
-    {
-        return [
-			'jobGenre' => $this->faker->name,
-			'title' => $this->faker->name,
-			'jobIllustration' => $this->faker->name,
-			'yearOfCreation' => $this->faker->name,
-			'illustrator_id' => $this->faker->name,
-        ];
-    }
+  public function definition()
+  {
+    return [
+      'jobGenre' => $this->faker->name(),
+      'title' => $this->faker->name(),
+      'jobIllustration' => $this->faker->imageUrl(),
+      'yearOfCreation' => $this->faker->year()
+    ];
+  }
 }

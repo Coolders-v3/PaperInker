@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 namespace App\Models;
 
@@ -7,13 +7,20 @@ use Illuminate\Database\Eloquent\Model;
 
 class Text extends Model
 {
-    use HasFactory;
+	use HasFactory;
+	
+    public $timestamps = true;
 
-    public function writer(){
-        return $this->belongsTo(Writer::class); 
+    protected $table = 'texts';
 
-    
+    protected $fillable = ['genre','title','description','year','writer_id'];
+	
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function writer()
+    {
+        return $this->hasOne('App\Models\Writer', 'id', 'writer_id');
     }
-
     
 }

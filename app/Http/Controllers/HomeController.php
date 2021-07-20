@@ -26,7 +26,6 @@ class HomeController extends Controller
 
   public function index()
   {
-    $service = Text::all();
-    return view('home'/* , ["texts"=>$service] */); //origanizar rutas
+    return view('home'); //origanizar rutas
   }
 }

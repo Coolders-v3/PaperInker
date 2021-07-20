@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Livewire\ReadWriter;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,12 +15,25 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/* Route::get('/', function () {
+  return view('welcome');
+});
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home'); */
+//Route Hooks - Do not delete//
+/* Route::view('illustrations', 'livewire.illustrations.index')->middleware('auth'); */
+
 Route::get('/', function () {
-    return view('welcome');
+  return view('welcome');
 }); 
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+/* Route::get('/create', [ReadWriter::class, 'createView'])->name('create');
+Route::post('/', [ReadWriter::class, 'store'])->name('store'); */
 //Route Hooks - Do not delete//
-	/* Route::view('illustrations', 'livewire.illustrations.index')->middleware('auth'); */
+Route::view('/home', 'livewire.texts.index')->middleware('auth');
+
