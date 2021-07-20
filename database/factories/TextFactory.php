@@ -22,10 +22,10 @@ class TextFactory extends Factory
     public function definition()
     {
         return [
-            'jobGenre' => $this->faker->name(),
+            'genre' => $this->faker->name(),
             'title' => $this->faker->name(),
-            'jobText' => $this->faker->text(),
-            'yearOfCreation' => $this->faker->date(),  
+            'description' => $this->faker->text(),
+            'year' => $this->faker->date(),  
         ];
     }
 }
