@@ -27,6 +27,6 @@ class HomeController extends Controller
     public function index()
     {
         $service = Text::all(); 
-        return view('profileViews.illustratorProfile', ["texts"=>$service]); //origanizar rutas
+        return view('home', /* ["texts"=>$service] */); //origanizar rutas
     }
 }
