@@ -13,7 +13,12 @@ class Illustration extends Model
 
     protected $table = 'illustrations';
 
-    protected $fillable = ['jobGenre','title','jobIllustration','yearOfCreation','illustrator_id'];
+    protected $fillable = [
+        'jobGenre',
+        'title',
+        'jobIllustration',
+        'yearOfCreation',
+        'illustrator_id'];
 	
     
     

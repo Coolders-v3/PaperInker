@@ -60,7 +60,7 @@ class Illustrations extends Component
 			'title' => $this-> title,
 			'jobIllustration' => $this-> jobIllustration,
 			'yearOfCreation' => $this-> yearOfCreation,
-			'illustrator_id' => Illustrator::find(Auth::id())->id
+			'illustrator_id' => User::find(Auth::id())->id //Illustrator::find(Auth::id())->id
         ]);
         
         $this->resetInput();

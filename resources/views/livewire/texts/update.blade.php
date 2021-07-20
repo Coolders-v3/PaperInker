@@ -27,10 +27,7 @@
                 <label for="year"></label>
                 <input wire:model="year" type="text" class="form-control" id="year" placeholder="Year">@error('year') <span class="error text-danger">{{ $message }}</span> @enderror
             </div>
-            <div class="form-group">
-                <label for="writer_id"></label>
-                <input wire:model="writer_id" type="text" class="form-control" id="writer_id" placeholder="Writer Id">@error('writer_id') <span class="error text-danger">{{ $message }}</span> @enderror
-            </div>
+           
                 </form>
             </div>
             <div class="modal-footer">

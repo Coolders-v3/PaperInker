@@ -66,7 +66,7 @@ class Texts extends Component
 			'title' => $this-> title,
 			'description' => $this-> description,
 			'year' => $this-> year,
-			'writer_id' => Writer::find(Auth::id())->id
+			'writer_id' => User::find(Auth::id())->id
         ]);
         
         $this->resetInput();
