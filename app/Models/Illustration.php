@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 namespace App\Models;
 
@@ -7,9 +7,20 @@ use Illuminate\Database\Eloquent\Model;
 
 class Illustration extends Model
 {
-    use HasFactory;
+	use HasFactory;
+	
+    public $timestamps = true;
 
-    public function illustrator(){
-        return $this->belongsTo(Illustrator::class); 
+    protected $table = 'illustrations';
+
+    protected $fillable = ['jobGenre','title','jobIllustration','yearOfCreation','illustrator_id'];
+	
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function illustrator()
+    {
+        return $this->hasOne('App\Models\Illustrator', 'id', 'illustrator_id');
     }
+    
 }
