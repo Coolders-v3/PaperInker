@@ -10,7 +10,7 @@
             </div>
             <div class="modal-body">
                 <form>
-					<input type="hidden" wire:model="selected_id">
+                    <input type="hidden" wire:model="selected_id">
             <div class="form-group">
                 <label for="genre"></label>
                 <input wire:model="genre" type="text" class="form-control" id="genre" placeholder="Genre">@error('genre') <span class="error text-danger">{{ $message }}</span> @enderror
@@ -31,7 +31,6 @@
                 <label for="writer_id"></label>
                 <input wire:model="writer_id" type="text" class="form-control" id="writer_id" placeholder="Writer Id">@error('writer_id') <span class="error text-danger">{{ $message }}</span> @enderror
             </div>
-
                 </form>
             </div>
             <div class="modal-footer">

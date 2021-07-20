@@ -11,7 +11,21 @@ class Text extends Model
 	
     public $timestamps = true;
 
+    public $timestamps = true;
+
     protected $table = 'texts';
+
+    protected $fillable = [
+        'genre',
+        'title',
+        'description',
+        'year',
+        'writer_id'
+    ];
+
+
+    public function writer(){
+        return $this->belongsTo(Writer::class); 
 
     protected $fillable = ['genre','title','description','year','writer_id'];
 	

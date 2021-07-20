@@ -1,4 +1,3 @@
-
 <!-- Modal -->
 <div wire:ignore.self class="modal fade" id="exampleModal" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -10,7 +9,7 @@
                 </button>
             </div>
            <div class="modal-body">
-				<form>
+                <form>
             <div class="form-group">
                 <label for="title"></label>
                 <input wire:model="title" type="text" class="form-control" id="title" placeholder="Title">@error('title') <span class="error text-danger">{{ $message }}</span> @enderror
@@ -27,7 +26,6 @@
                 <label for="description"></label>
                 <input wire:model="description" class="form-control" id="description" placeholder="Description">@error('description') <span class="error text-danger">{{ $message }}</span> @enderror
             </div>
-
                 </form>
             </div>
             <div class="modal-footer">
