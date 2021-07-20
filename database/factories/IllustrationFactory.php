@@ -16,8 +16,8 @@ class IllustrationFactory extends Factory
 			'jobGenre' => $this->faker->name,
 			'title' => $this->faker->name,
 			'jobIllustration' => $this->faker->name,
-			'yearOfCreation' => $this->faker->name,
-			'illustrator_id' => $this->faker->name,
-        ];
+			'yearOfCreation' => $this->faker->date,
+/* 			'illustrator_id' => $this->faker->name,
+ */        ];
     }
 }
