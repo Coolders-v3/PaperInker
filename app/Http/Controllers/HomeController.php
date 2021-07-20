@@ -32,13 +32,17 @@ class HomeController extends Controller
     {
         $service = Text::all(); 
         
-        if (User::find(Auth::id())->isWriter == true) {
+      
+        if (User::find(Auth::id())->isWriter == true && count (Text::all()) == 0) {
 
             Writer::create(['user_id' => User::find(Auth::id())->id]);
             return view('profileViews.writerProfile', ["texts"=>$service]);
         }
 
+        if (User::find(Auth::id())->isWriter == false && count (Text::all()) == 0) {
+
             Illustrator::create(['user_id' => User::find(Auth::id())->id]);
             return view('profileViews.illustratorProfile', ["texts"=>$service]); //origanizar rutas
     }
+}
 }
