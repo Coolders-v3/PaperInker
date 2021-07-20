@@ -58,11 +58,11 @@
                         <a href="{{ url('/home') }}" class="text-sm text-gray-700 underline">Home</a>
                     @else
                         <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">
-                            <button type="button" class="btn botones-home-index">Login</button>
+                          {{--   <button type="button" class="btn botones-home-index">Login</button> --}}
                         </a>
                         @if (Route::has('register'))
                             <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">
-                                <button type="button" class="btn botones-home-index">Register</button></a>
+                             {{--    <button type="button" class="btn botones-home-index">Register</button></a> --}}
                         @endif
                     @endauth
             @endif
