@@ -22,6 +22,8 @@ class Texts extends Component
     {   
         
 		$keyWord = '%'.$this->keyWord .'%';
+
+        //if ('writer_id' == Writer::find(Auth::id())->id) {
         return view('livewire.texts.view', [
             'texts' => Text::latest()
 						->orWhere('genre', 'LIKE', $keyWord)
@@ -31,6 +33,7 @@ class Texts extends Component
 						->orWhere('writer_id', 'LIKE', $keyWord)
 						->paginate(10),
         ]);
+    //}
     }
 	
     public function cancel()
