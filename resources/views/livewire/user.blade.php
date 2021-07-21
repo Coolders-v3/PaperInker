@@ -7,10 +7,11 @@
           alt=""
         >
       </figure>
-      <span class="name">User's Name</span>
+      <span class="name">Writer's Name</span>
     </div>
     <p class="description">
-      Cuéntanos algo sobre ti.
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+      the industry's standard dummy text ever since the 1500s.
     </p>
   </section>
 </div>
