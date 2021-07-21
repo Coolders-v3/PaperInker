@@ -24,8 +24,11 @@ class WriterFactory extends Factory
     public function definition()
     {
         return [
+           
             'personaldescription' => $this->faker->text(),
             'personalImage' => $this->faker->imageUrl(),
+         
+           
         ];
     }
 }

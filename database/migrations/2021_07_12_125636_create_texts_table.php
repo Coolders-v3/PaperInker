@@ -15,12 +15,12 @@ class CreateTextsTable extends Migration
     {
         Schema::create('texts', function (Blueprint $table) {
             $table->id();
-            $table->string('jobGenre');
+            $table->string('genre');
             $table->string('title');
-            $table->string('jobText');
-            $table->date('yearOfCreation');
+            $table->string('description');
+            $table->year('year');
             $table->unsignedBigInteger('writer_id')->nullable();
-            $table->foreign('writer_id')->references('id')->on('writers')->onUpdate('cascade')->onDelete('cascade');
+            //$table->foreign('writer_id')->references('id')->on('writers')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }

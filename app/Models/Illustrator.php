@@ -10,15 +10,21 @@ class Illustrator extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'user_id'
+    ];
+    
     public function writers (){
         return $this->belongsToMany(Writer::class); 
     }
 
-    public function illustrations (){
-        return $this->hasMany(Illustration::class); 
-    }
+  
     public function user (){
         return $this->belongsTo(User::class); 
+    }
+
+    public function illustrations (){
+        return $this->hasMany(Illustration::class); 
     }
 
 }
