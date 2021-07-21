@@ -3,30 +3,29 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Create New Illustration</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Create New Text</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                      <span aria-hidden="true close-btn">×</span>
                 </button>
             </div>
            <div class="modal-body">
-				<form>
-            <div class="form-group">
-                <label for="jobGenre"></label>
-                <input wire:model="jobGenre" type="text" class="form-control" id="jobGenre" placeholder="Jobgenre">@error('jobGenre') <span class="error text-danger">{{ $message }}</span> @enderror
-            </div>
+                <form>
             <div class="form-group">
                 <label for="title"></label>
                 <input wire:model="title" type="text" class="form-control" id="title" placeholder="Title">@error('title') <span class="error text-danger">{{ $message }}</span> @enderror
             </div>
             <div class="form-group">
-                <label for="jobIllustration"></label>
-                <input wire:model="jobIllustration" type="text" class="form-control" id="jobIllustration" placeholder="Jobillustration">@error('jobIllustration') <span class="error text-danger">{{ $message }}</span> @enderror
+                <label for="genre"></label>
+                <input wire:model="genre" type="text" class="form-control" id="genre" placeholder="Genre">@error('genre') <span class="error text-danger">{{ $message }}</span> @enderror
             </div>
             <div class="form-group">
-                <label for="yearOfCreation"></label>
-                <input wire:model="yearOfCreation" type="text" class="form-control" id="yearOfCreation" placeholder="Yearofcreation">@error('yearOfCreation') <span class="error text-danger">{{ $message }}</span> @enderror
+                <label for="year"></label>
+                <input wire:model="year" type="text" class="form-control" id="year" placeholder="Year">@error('year') <span class="error text-danger">{{ $message }}</span> @enderror
             </div>
-            
+            <div class="form-group">
+                <label for="description"></label>
+                <input wire:model="description" class="form-control" id="description" placeholder="Description">@error('description') <span class="error text-danger">{{ $message }}</span> @enderror
+            </div>
                 </form>
             </div>
             <div class="modal-footer">

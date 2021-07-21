@@ -13,14 +13,20 @@ class Illustration extends Model
 
     protected $table = 'illustrations';
 
-    protected $fillable = ['jobGenre','title','jobIllustration','yearOfCreation','illustrator_id'];
+    protected $fillable = [
+        'jobGenre',
+        'title',
+        'jobIllustration',
+        'yearOfCreation',
+        'illustrator_id'];
 	
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasOne
-     */
+    
+    
     public function illustrator()
     {
-        return $this->hasOne('App\Models\Illustrator', 'id', 'illustrator_id');
+        return $this->belongsTo(Illustrator::class); 
     }
-    
+    /**
+      * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
 }

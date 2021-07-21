@@ -13,11 +13,10 @@ class IllustrationFactory extends Factory
     public function definition()
     {
         return [
-			'jobGenre' => $this->faker->name,
-			'title' => $this->faker->name,
-			'jobIllustration' => $this->faker->name,
-			'yearOfCreation' => $this->faker->name,
-			'illustrator_id' => $this->faker->name,
-        ];
+			'jobGenre' => $this->faker->name(),
+			'title' => $this->faker->name(),
+			'jobIllustration' => $this->faker->name(),
+			'yearOfCreation' => $this->faker->date(),
+      ];
     }
 }
