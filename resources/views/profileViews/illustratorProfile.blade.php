@@ -1,5 +1,6 @@
-@extends('layouts.app')
+<!-- @extends('layouts.app')
 
 @section('content')
-  @livewire('view')
-@endsection
+  @livewire('user-info')
+  @livewire('illustrator-writer')
+@endsection  -->
