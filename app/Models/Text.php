@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 namespace App\Models;
 
@@ -7,7 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Text extends Model
 {
-    use HasFactory;
+	use HasFactory;
+	
 
     public $timestamps = true;
 
@@ -24,9 +25,10 @@ class Text extends Model
 
     public function writer(){
         return $this->belongsTo(Writer::class); 
-
-    
     }
-
-    
+	
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+   
 }

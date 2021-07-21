@@ -27,10 +27,7 @@
                 <label for="yearOfCreation"></label>
                 <input wire:model="yearOfCreation" type="text" class="form-control" id="yearOfCreation" placeholder="Yearofcreation">@error('yearOfCreation') <span class="error text-danger">{{ $message }}</span> @enderror
             </div>
-            <div class="form-group">
-                <label for="illustrator_id"></label>
-                <input wire:model="illustrator_id" type="text" class="form-control" id="illustrator_id" placeholder="Illustrator Id">@error('illustrator_id') <span class="error text-danger">{{ $message }}</span> @enderror
-            </div>
+          
 
                 </form>
             </div>
