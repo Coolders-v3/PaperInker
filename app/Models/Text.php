@@ -19,14 +19,14 @@ class Text extends Model
         'title',
         'description',
         'year',
-        'writer_id'
+        'user_id'
     ];
 
 
-    public function writer(){
+/*     public function writer(){
         return $this->belongsTo(Writer::class); 
     }
-	
+	 */
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */

@@ -14,7 +14,7 @@ class Illustrations extends Component
     use WithPagination;
 
 	protected $paginationTheme = 'bootstrap';
-    public $selected_id, $keyWord, $jobGenre, $title, $jobIllustration, $yearOfCreation, $illustrator_id;
+    public $selected_id, $keyWord, $jobGenre, $title, $jobIllustration, $yearOfCreation, $user_id;
     public $updateMode = false;
 
     public function render()
@@ -26,7 +26,7 @@ class Illustrations extends Component
 						->orWhere('title', 'LIKE', $keyWord)
 						->orWhere('jobIllustration', 'LIKE', $keyWord)
 						->orWhere('yearOfCreation', 'LIKE', $keyWord)
-						->orWhere('illustrator_id', 'LIKE', $keyWord)
+						->orWhere('user_id', 'LIKE', $keyWord)
 						->paginate(10),
         ]);
     }
@@ -43,7 +43,7 @@ class Illustrations extends Component
 		$this->title = null;
 		$this->jobIllustration = null;
 		$this->yearOfCreation = null;
-		$this->illustrator_id = null;
+		$this->user_id = null;
     }
 
     public function store()
@@ -60,7 +60,7 @@ class Illustrations extends Component
 			'title' => $this-> title,
 			'jobIllustration' => $this-> jobIllustration,
 			'yearOfCreation' => $this-> yearOfCreation,
-			'illustrator_id' => User::find(Auth::id())->id //Illustrator::find(Auth::id())->id
+			'user_id' => User::find(Auth::id())->id //Illustrator::find(Auth::id())->id
         ]);
         
         $this->resetInput();
@@ -77,7 +77,7 @@ class Illustrations extends Component
 		$this->title = $record-> title;
 		$this->jobIllustration = $record-> jobIllustration;
 		$this->yearOfCreation = $record-> yearOfCreation;
-		$this->illustrator_id = $record-> illustrator_id;
+		$this->user_id = $record-> user_id;
 		
         $this->updateMode = true;
     }
@@ -98,7 +98,7 @@ class Illustrations extends Component
 			'title' => $this-> title,
 			'jobIllustration' => $this-> jobIllustration,
 			'yearOfCreation' => $this-> yearOfCreation,
-			'illustrator_id' => $this-> illustrator_id
+			'user_id' => $this-> user_id
             ]);
 
             $this->resetInput();
