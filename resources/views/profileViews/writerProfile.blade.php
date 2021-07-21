@@ -26,6 +26,5 @@
     <span class="iconify likeBtn" data-icon="cil:heart" data-inline="false"></span>
     <span class="iconify crossBtn" data-icon="emojione-monotone:cross-mark" data-inline="false"></span>
   </div>
-
 @endsection
 
