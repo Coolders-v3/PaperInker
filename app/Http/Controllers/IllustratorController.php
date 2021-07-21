@@ -24,7 +24,7 @@ class IllustratorController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**

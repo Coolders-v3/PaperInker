@@ -18,9 +18,9 @@ class CreateTextsTable extends Migration
             $table->string('genre');
             $table->string('title');
             $table->string('description');
-            $table->date('year');
+            $table->year('year');
             $table->unsignedBigInteger('writer_id')->nullable();
-            $table->foreign('writer_id')->references('id')->on('writers')->onUpdate('cascade')->onDelete('cascade');
+            //$table->foreign('writer_id')->references('id')->on('writers')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }

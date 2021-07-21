@@ -5,6 +5,9 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use Livewire\WithPagination;
 use App\Models\Illustration;
+use App\Models\User;
+use App\Models\Illustrator;
+use Illuminate\Support\Facades\Auth;
 
 class Illustrations extends Component
 {
@@ -36,11 +39,11 @@ class Illustrations extends Component
 	
     private function resetInput()
     {		
-		/* $this->jobGenre = null;
-		$this->title = null; */
+		$this->jobGenre = null;
+		$this->title = null;
 		$this->jobIllustration = null;
-		/* $this->yearOfCreation = null;
-		$this->illustrator_id = null; */
+		$this->yearOfCreation = null;
+		$this->illustrator_id = null;
     }
 
     public function store()
@@ -49,7 +52,7 @@ class Illustrations extends Component
 		'jobGenre' => 'required',
 		'title' => 'required',
 		'jobIllustration' => 'required',
-		'yearOfCreation' => 'required',
+		'yearOfCreation' => 'required'
         ]);
 
         Illustration::create([ 
@@ -57,7 +60,7 @@ class Illustrations extends Component
 			'title' => $this-> title,
 			'jobIllustration' => $this-> jobIllustration,
 			'yearOfCreation' => $this-> yearOfCreation,
-			'illustrator_id' => $this-> illustrator_id
+			'illustrator_id' => User::find(Auth::id())->id //Illustrator::find(Auth::id())->id
         ]);
         
         $this->resetInput();

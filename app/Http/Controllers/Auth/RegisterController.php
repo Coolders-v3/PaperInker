@@ -2,12 +2,18 @@
 
 namespace App\Http\Controllers\Auth;
 
+
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
+use App\Models\Writer;
+use App\Models\Illustrator;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+
+use App\Http\Controllers;
 
 class RegisterController extends Controller
 {
@@ -38,7 +44,9 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
+       
         $this->middleware('guest');
+        
     }
 
     /**
@@ -54,8 +62,11 @@ class RegisterController extends Controller
             'nickname' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'isWriter' => ['required', 'boolean']
         ]);
     }
+
+    
 
     /**
      * Create a new user instance after a valid registration.
@@ -65,11 +76,31 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+
+            return User::create([
             'name' => $data['name'],
+            'nickname' => $data['nickname'],
             'email' => $data['email'],
             'nickname' => $data['nickname'],
             'password' => Hash::make($data['password']),
-        ]);
-    }
+            'isWriter' => $data['isWriter']
+            ]);
+            
+            
+            }
+            
+    protected function createProfile() {
+        
+                if (User::find(Auth::id())->isWriter == true) {
+        
+                        return Writer::create(['user_id' => User::find(Auth::id())->id]);
+                        //return view('profileViews.writerProfile', ["texts"=>$service]);
+                    }
+            
+                        return Illustrator::create(['user_id' => User::find(Auth::id())->id]);
+                       // return view('profileViews.illustratorProfile', ["texts"=>$service]); //origanizar rutas
+                               
+            }
+   
+ 
 }

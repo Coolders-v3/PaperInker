@@ -4,28 +4,20 @@ namespace Database\Factories;
 
 use App\Models\Text;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 
 class TextFactory extends Factory
 {
-    /**
-     * The name of the factory's corresponding model.
-     *
-     * @var string
-     */
     protected $model = Text::class;
 
-    /**
-     * Define the model's default state.
-     *
-     * @return array
-     */
     public function definition()
     {
         return [
-            'genre' => $this->faker->name(),
-            'title' => $this->faker->name(),
-            'description' => $this->faker->text(),
-            'year' => $this->faker->date(),  
+			'genre' => $this->faker->name(),
+			'title' => $this->faker->name(),
+			'description' => $this->faker->name(),
+			'year' => $this->faker->year(),
+			
         ];
     }
 }
