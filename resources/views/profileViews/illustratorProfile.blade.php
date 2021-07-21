@@ -1,5 +1,5 @@
 @extends('layouts.app')
 
 @section('content')
-  @livewire('view')
+   @livewire('read-illustrator')
 @endsection
