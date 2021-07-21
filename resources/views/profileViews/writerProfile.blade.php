@@ -1,7 +1,7 @@
-@extends('layouts.app')
+{{-- @extends('layouts.app')
 
 @section('content')
-@livewire('read-writer')
-
-@endsection
+  @livewire('user-info')
+  @livewire('read-writer')
+@endsection --}}
   
