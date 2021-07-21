@@ -57,7 +57,7 @@
 										</ul>
 									</div>
 								<figure class="sampleImg">
-									<img src="{{ $row->jobIllustration }}">
+									<img src="{{ $row->description }}">
 								</figure>
 								
 								</div>
