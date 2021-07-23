@@ -17,6 +17,7 @@ class IllustrationFactory extends Factory
 			'title' => $this->faker->name(),
 			'description' => $this->faker->name(),
 			'year' => $this->faker->year(),
+      'favorite'=>$this->faker->boolean(),
       ];
     }
 }
