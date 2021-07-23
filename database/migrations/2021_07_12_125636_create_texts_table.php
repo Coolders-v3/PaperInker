@@ -19,6 +19,7 @@ class CreateTextsTable extends Migration
             $table->string('title');
             $table->string('description');
             $table->year('year');
+            $table->boolean('favorite')->default(0);
             $table->unsignedBigInteger('writer_id')->nullable();
             //$table->foreign('writer_id')->references('id')->on('writers')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();

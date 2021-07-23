@@ -1,5 +1,6 @@
 @section('title', __('Illustrations'))
 <div class="container-fluid">
+	@livewire('user')
 	<div class="row justify-content-center">
 		<div class="col-md-12">
 			<div class="card">
@@ -15,9 +16,7 @@
 						@if (session()->has('message'))
 						<div wire:poll.4s class="btn btn-sm btn-success" style="margin-top:0px; margin-bottom:0px;"> {{ session('message') }} </div>
 						@endif
-						<div>
-							<input wire:model='keyWord' type="text" class="form-control" name="search" id="search" placeholder="Search Illustrations">
-						</div>
+						
 						<div class="btn btn-sm btn-info" data-toggle="modal" data-target="#exampleModal">
 						<i class="fa fa-plus"></i>  Add Illustrations
 						</div>

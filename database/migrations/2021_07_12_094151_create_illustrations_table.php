@@ -19,6 +19,7 @@ class CreateIllustrationsTable extends Migration
             $table->string('title');
             $table->string('description');
             $table->year('year');
+            $table->boolean('favorite')->default(0);
             $table->unsignedBigInteger('illustrator_id')->nullable();
            // $table->foreign('illustrator_id')->references('id')->on('illustrators')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();

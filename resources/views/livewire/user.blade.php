@@ -1,17 +1,18 @@
+@extends('layouts.app')
+
 <div>
   <section class="profile">
     <div class="profilePic">
       <figure>
-        <img
+        <img class="profilepicture"
           src="https://cultivatedculture.com/wp-content/uploads/2019/12/LinkedIn-Profile-Picture-Example-Sami-Viitama%CC%88ki-.jpeg"
           alt=""
         >
       </figure>
-      <span class="name">Writer's Name</span>
+      <span class="name">User's Name</span>
     </div>
     <p class="description">
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-      the industry's standard dummy text ever since the 1500s.
+      Cuétanos sobre ti! :)
     </p>
   </section>
 </div>
