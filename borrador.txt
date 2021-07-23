@@ -1,6 +1,6 @@
 public function likesToWriters()
 {
-    return $this->belongsToMany(self::class, 'Illustrators_Writers_liked', 'user_id', 'user_liked_id');
+    return $this->belongsToMany(self::class, 'Illustrators_Writers_liked', 'writer_id', 'illustrator_liked_id');
 }
 
 public function likesToIllustrators()
