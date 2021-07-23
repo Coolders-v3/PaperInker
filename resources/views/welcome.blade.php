@@ -1,28 +1,29 @@
-@extends('layouts.app')
-{{-- @section('title', __('Welcome')) --}}
+<!doctype html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-@section('content')
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
-<div class="container-fluid">
-<div class="row justify-content-center">
-    <div class="col-md-12">
-        <div class="card">
-            <div class="card-header"><h5><span class="text-center fa fa-home"></span> @yield('title')</h5></div>
-            <div class="card-body">
-              <h5>  
-            @guest
-                {{ __('Welcome to') }} {{ config('app.name', 'Laravel') }} !!! </br>
-                Please contact admin to get your Login Credentials or click "Login" to go to your Dashboard.
-            @else
-                    Hi {{ Auth::user()->name }}, Welcome back to {{ config('app.name', 'Laravel') }}.
-            @endif  
-                </h5>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-@endsection 
+	<title>@hasSection('title') @yield('title') | @endif {{ config('app.name', 'Laravel') }}</title>
+
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+    <!-- Styles -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/home-index.css') }}" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+	 @livewireStyles
+</head>
+<body>
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0 color-body">
             <div class="max-w-6xl mx-auto sm:px-6 lg:px-8 body-index">
                 <div class="flex justify-center  sm:pt-0 contenedor-logo-home-index">  
@@ -70,5 +71,12 @@
                 </div>
             </div>
         </div>
+        @livewireScripts
+        <script type="text/javascript">
+          window.livewire.on('closeModal', () => {
+            $('#exampleModal').modal('hide');
+          });
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     </body>
 </html>
