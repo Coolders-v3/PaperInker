@@ -1,6 +1,6 @@
 {{-- @extends('layouts.app')
 
 @section('content')
-  @livewire('user') 
-  @livewire('read-illustrator')
+  @livewire('user-info')
+  @livewire('illustrator-writer')
 @endsection --}}
