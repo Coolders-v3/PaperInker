@@ -1,4 +1,4 @@
-/*!
+@import url(https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Satisfy&display=swap);/*!
  * Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
@@ -17151,5 +17151,16 @@ body.swal2-toast-shown .swal2-container.swal2-bottom-right {
   right: 0;
   bottom: 0;
   left: auto;
+}
+
+.writerSample {
+  background-color: #e0dfd7;
+  border-radius: 7px;
+  border: solid 0.5px #c5c5be;
+  margin: 15px;
+  padding: 15px;
+  font-family: "Kaushan Script", sans-serif;
+  font-size: 18px;
+  color: #414141;
 }
 

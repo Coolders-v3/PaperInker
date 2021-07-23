@@ -16,8 +16,8 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-}); 
+  return view('welcome');
+});
 
 Auth::routes();
 
@@ -25,3 +25,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 //Route Hooks - Do not delete//
 Route::view('illustrations', 'livewire.illustrations.index')->middleware('auth')->name('illustrations');
 Route::view('texts', 'livewire.texts.index')->middleware('auth')->name('texts');
+
+Route::get('/slides', function () {
+  return view('profileViews.userSlides');
+});
