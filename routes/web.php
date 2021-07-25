@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\ReadWriter;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Livewire\UserSlides;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +27,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::view('illustrations', 'livewire.illustrations.index')->middleware('auth')->name('illustrations');
 Route::view('texts', 'livewire.texts.index')->middleware('auth')->name('texts');
 
-Route::get('/slides', function () {
-  return view('profileViews.userSlides');
-});
+Route::get('/slides', [UserSlides::class, 'render'])->middleware('auth')->name('slides');
