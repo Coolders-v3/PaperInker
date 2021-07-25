@@ -20,7 +20,7 @@ class CreateTextsTable extends Migration
             $table->string('description');
             $table->year('year');
             $table->unsignedBigInteger('user_id')->nullable();
-            //$table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }
