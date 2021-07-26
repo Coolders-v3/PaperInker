@@ -15,7 +15,7 @@ class Illustrations extends Component
 
 	protected $paginationTheme = 'bootstrap';
 
-    public $selected_id, $keyWord, $genre, $title, $description, $year, $illustrator_id;
+    public $selected_id, $keyWord, $genre, $title, $description, $year, $user_id;
     public $updateMode = false;
 
     public function render()
@@ -39,7 +39,7 @@ class Illustrations extends Component
 		$this->title = null;
 		$this->description = null;
 		$this->year = null;
-		$this->illustrator_id = null;
+		$this->user_id = null;
     }
 
     public function store()
@@ -74,7 +74,7 @@ class Illustrations extends Component
 		$this->title = $record-> title;
 		$this->description = $record-> description;
 		$this->year = $record-> year;
-		$this->illustrator_id = $record-> illustrator_id;
+		$this->user_id = $record-> user_id;
 
 		
         $this->updateMode = true;
@@ -96,7 +96,7 @@ class Illustrations extends Component
 			'title' => $this-> title,
 			'description' => $this-> description,
 			'year' => $this-> year,
-			'illustrator_id' => $this-> illustrator_id
+			'user_id' => $this-> user_id
 
             ]);
 
