@@ -14,7 +14,8 @@ class Illustrations extends Component
     use WithPagination;
 
 	protected $paginationTheme = 'bootstrap';
-    public $selected_id, $keyWord, $jobGenre, $title, $jobIllustration, $yearOfCreation, $user_id;
+
+    public $selected_id, $keyWord, $genre, $title, $description, $year, $illustrator_id;
     public $updateMode = false;
 
     public function render()
@@ -22,11 +23,11 @@ class Illustrations extends Component
 		$keyWord = '%'.$this->keyWord .'%';
         return view('livewire.illustrations.view', [
             'illustrations' => Illustration::latest()
-						->orWhere('jobGenre', 'LIKE', $keyWord)
+						->orWhere('genre', 'LIKE', $keyWord)
 						->orWhere('title', 'LIKE', $keyWord)
-						->orWhere('jobIllustration', 'LIKE', $keyWord)
-						->orWhere('yearOfCreation', 'LIKE', $keyWord)
-						->orWhere('user_id', 'LIKE', $keyWord)
+						->orWhere('description', 'LIKE', $keyWord)
+						->orWhere('year', 'LIKE', $keyWord)
+						->orWhere('illustrator_id', 'LIKE', $keyWord)
 						->paginate(10),
         ]);
     }
@@ -39,28 +40,28 @@ class Illustrations extends Component
 	
     private function resetInput()
     {		
-		$this->jobGenre = null;
+		$this->genre = null;
 		$this->title = null;
-		$this->jobIllustration = null;
-		$this->yearOfCreation = null;
-		$this->user_id = null;
+		$this->description = null;
+		$this->year = null;
+		$this->illustrator_id = null;
     }
 
     public function store()
     {
         $this->validate([
-		'jobGenre' => 'required',
+		'genre' => 'required',
 		'title' => 'required',
-		'jobIllustration' => 'required',
-		'yearOfCreation' => 'required'
+		'description' => 'required',
+		'year' => 'required'
         ]);
 
         Illustration::create([ 
-			'jobGenre' => $this-> jobGenre,
+			'genre' => $this-> genre,
 			'title' => $this-> title,
-			'jobIllustration' => $this-> jobIllustration,
-			'yearOfCreation' => $this-> yearOfCreation,
-			'user_id' => User::find(Auth::id())->id //Illustrator::find(Auth::id())->id
+			'description' => $this-> description,
+			'year' => $this-> year,
+			'illustrator_id' => User::find(Auth::id())->id //Illustrator::find(Auth::id())->id
         ]);
         
         $this->resetInput();
@@ -73,11 +74,12 @@ class Illustrations extends Component
         $record = Illustration::findOrFail($id);
 
         $this->selected_id = $id; 
-		$this->jobGenre = $record-> jobGenre;
+		$this->genre = $record-> genre;
 		$this->title = $record-> title;
-		$this->jobIllustration = $record-> jobIllustration;
-		$this->yearOfCreation = $record-> yearOfCreation;
-		$this->user_id = $record-> user_id;
+		$this->description = $record-> description;
+		$this->year = $record-> year;
+		$this->illustrator_id = $record-> illustrator_id;
+
 		
         $this->updateMode = true;
     }
@@ -85,20 +87,21 @@ class Illustrations extends Component
     public function update()
     {
         $this->validate([
-		'jobGenre' => 'required',
+		'genre' => 'required',
 		'title' => 'required',
-		'jobIllustration' => 'required',
-		'yearOfCreation' => 'required',
+		'description' => 'required',
+		'year' => 'required',
         ]);
 
         if ($this->selected_id) {
 			$record = Illustration::find($this->selected_id);
             $record->update([ 
-			'jobGenre' => $this-> jobGenre,
+			'genre' => $this-> genre,
 			'title' => $this-> title,
-			'jobIllustration' => $this-> jobIllustration,
-			'yearOfCreation' => $this-> yearOfCreation,
-			'user_id' => $this-> user_id
+			'description' => $this-> description,
+			'year' => $this-> year,
+			'illustrator_id' => $this-> illustrator_id
+
             ]);
 
             $this->resetInput();
