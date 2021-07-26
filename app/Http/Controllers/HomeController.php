@@ -50,13 +50,13 @@ class HomeController extends Controller
             //return view('livewire.texts.view', ['texts' => $texts]);
         }
 
-        if (User::find(Auth::id())->isWriter == true && count($illustrations) == 0) { 
+        if (User::find(Auth::id())->isWriter != true && count($illustrations) == 0) { 
 
             Illustrator::create(['user_id' => User::find(Auth::id())->id]);
             return view ('home');
             //return view('livewire.illustrations.view', ['illustrations' => $illustrations]);}
         
-            if (User::find(Auth::id())->isWriter == true && count($illustrations) != 0) {
+            if (User::find(Auth::id())->isWriter != true && count($illustrations) != 0) {
                 
             return view ('home');
             //return view('livewire.illustrations.view', ['illustrations' => $illustrations]);
