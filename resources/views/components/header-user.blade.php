@@ -1,3 +1,3 @@
 <div>
-    <!-- Order your soul. Reduce your wants. - Augustine -->
+    Order your soul. Reduce your wants. 
 </div>

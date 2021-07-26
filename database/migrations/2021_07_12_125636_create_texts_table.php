@@ -19,8 +19,13 @@ class CreateTextsTable extends Migration
             $table->string('title');
             $table->string('description');
             $table->year('year');
+            $table->boolean('favorite')->default(0);
             $table->unsignedBigInteger('user_id')->nullable();
             $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
+
+            //$table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
+
+
             $table->timestamps();
         });
     }

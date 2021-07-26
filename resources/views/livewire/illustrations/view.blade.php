@@ -1,5 +1,6 @@
 @section('title', __('Illustrations'))
 <div class="container-fluid">
+	@include('livewire.user.user')
 	<div class="row justify-content-center">
 		<div class="col-md-12">
 			<div class="card">
@@ -54,7 +55,8 @@
 										</ul>
 									</div>
 								<figure class="sampleImg">
-									<img src="{{ $illustration->jobIllustration }}">
+									<img src="{{ $illustration->description }}">
+
 								</figure>
 								
 								</div>
