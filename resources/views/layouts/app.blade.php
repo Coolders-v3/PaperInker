@@ -1,5 +1,5 @@
 <!doctype html>
-<x-HeaderUser/>
+
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
@@ -82,7 +82,7 @@
                 </div>
             </div>
         </nav>
-        <x-user-info/>
+      
 
         <main class="py-2">
             @yield('content')
