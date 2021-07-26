@@ -30,8 +30,8 @@ class VerificationController extends Controller
      *
      * @var string
      */
-    protected $redirectToI = RouteServiceProvider::HOMEI;
-    protected $redirectToW = RouteServiceProvider::HOMEW;
+
+    protected $redirectToW = RouteServiceProvider::HOME;
 
     /**
      * Create a new controller instance.
