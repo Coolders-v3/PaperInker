@@ -22,6 +22,7 @@ class DatabaseSeeder extends Seeder
         //Text::factory(10)->create();
         //Illustrator::factory(5)->create();
         //Illustration::factory(5)->create();
-        User::factory()->create(['email'=>'usuario@gmail.com']);
-    }
+        User::factory()->create(['email'=>'escritor@gmail.com']);
+        User::factory()->create(['email'=>'ilustrador@gmail.com', 'isWriter'=>false]);
+}
 }
