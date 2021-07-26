@@ -18,7 +18,7 @@ class Illustration extends Model
         'title',
         'description',
         'year',
-        'illustrator_id'];
+        'user_id'];
 	
     
     
