@@ -1,5 +1,6 @@
 @section('title', __('Illustrations'))
 <div class="container-fluid">
+	@include('livewire.user.user')
 	<div class="row justify-content-center">
 		<div class="col-md-12">
 			<div class="card">
@@ -15,9 +16,6 @@
 						@if (session()->has('message'))
 						<div wire:poll.4s class="btn btn-sm btn-success" style="margin-top:0px; margin-bottom:0px;"> {{ session('message') }} </div>
 						@endif
-						<div>
-							<input wire:model='keyWord' type="text" class="form-control" name="search" id="search" placeholder="Search Illustrations">
-						</div>
 						<div class="btn btn-sm btn-info" data-toggle="modal" data-target="#exampleModal">
 						<i class="fa fa-plus"></i>  Add Illustrations
 						</div>
@@ -41,7 +39,7 @@
 							</tr>
 						</thead>
 						<tbody>
-							@foreach($illustrations as $row)
+							@foreach($illustrations as $illustration)
 							<article class="samples">
 								<div class="sampleCard">
 									<div class="btn-group dropend dropDownMenu">
@@ -50,14 +48,15 @@
 		
 										</button>
 										<ul class="dropdown-menu">
-										<li><a data-toggle="modal" data-target="#updateModal" class="dropdown-item" wire:click="edit({{$row->id}})"><i class="fa fa-edit"></i> Edit </a>
+										<li><a data-toggle="modal" data-target="#updateModal" class="dropdown-item" wire:click="edit({{$illustration->id}})"><i class="fa fa-edit"></i> Edit </a>
 										</li>
-										<li><a class="dropdown-item" onclick="confirm('Confirm Delete Illustration id {{$row->id}}? \nDeleted Illustrations cannot be recovered!')||event.stopImmediatePropagation()" wire:click="destroy({{$row->id}})"><i class="fa fa-trash"></i> Delete </a>
+										<li><a class="dropdown-item" onclick="confirm('Confirm Delete Illustration id {{$illustration->id}}? \nDeleted Illustrations cannot be recovered!')||event.stopImmediatePropagation()" wire:click="destroy({{$illustration->id}})"><i class="fa fa-trash"></i> Delete </a>
 										</li>
 										</ul>
 									</div>
 								<figure class="sampleImg">
-									<img src="{{ $row->jobIllustration }}">
+									<img src="{{ $illustration->description }}">
+
 								</figure>
 								
 								</div>
@@ -65,7 +64,7 @@
 							@endforeach
 						</tbody>
 					</table>						
-					{{ $illustrations->links() }}
+				{{-- 	{{ $illustrations->links() }} --}}
 					</div>
 				</div>
 			</div>
