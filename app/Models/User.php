@@ -12,49 +12,60 @@ use App\Models\Illustrator;
 
 class User extends Authenticatable
 {
-    use HasFactory, Notifiable;
+  use HasFactory, Notifiable;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    protected $fillable = [
-        'name',
-        'nickname',
-        'email',
-        'password',
-        'isWriter'
-    ];
+  /**
+   * The attributes that are mass assignable.
+   *
+   * @var array
+   */
+  protected $fillable = [
+    'name',
+    'nickname',
+    'email',
+    'password',
+    'isWriter'
+  ];
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
-    protected $hidden = [
-        'password',
-        'remember_token',
-    ];
+  /**
+   * The attributes that should be hidden for arrays.
+   *
+   * @var array
+   */
+  protected $hidden = [
+    'password',
+    'remember_token',
+  ];
 
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
+  /**
+   * The attributes that should be cast to native types.
+   *
+   * @var array
+   */
+  protected $casts = [
+    'email_verified_at' => 'datetime',
+  ];
 
- public function writer(){
-        return $this->hasOne(Writer::class); 
-    } 
+  public function writer()
+  {
+    return $this->hasOne(Writer::class);
+  }
 
-    public function illustrator(){
-        return $this->hasOne(Illustrator::class); 
-    }
+  public function illustrator()
+  {
+    return $this->hasOne(Illustrator::class);
+  }
 
-    /* public function createProfile() {
+  public function texts()
+  {
+    return $this->hasMany(Text::class);
+  }
+  
+  public function illustrations()
+  {
+    return $this->hasMany(Illustration::class);
+  }
+  /* public function createProfile() {
         
         if (User::find(Auth::id())->isWriter == true) {
 
@@ -66,5 +77,4 @@ class User extends Authenticatable
                // return view('profileViews.illustratorProfile', ["texts"=>$service]); //origanizar rutas
                        
     } */
-
 }

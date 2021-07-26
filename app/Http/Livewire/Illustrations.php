@@ -14,6 +14,7 @@ class Illustrations extends Component
     use WithPagination;
 
 	protected $paginationTheme = 'bootstrap';
+
     public $selected_id, $keyWord, $genre, $title, $description, $year, $illustrator_id;
     public $updateMode = false;
 
@@ -21,13 +22,8 @@ class Illustrations extends Component
     {
 		$keyWord = '%'.$this->keyWord .'%';
         return view('livewire.illustrations.view', [
-            'illustrations' => Illustration::latest()
-						->orWhere('genre', 'LIKE', $keyWord)
-						->orWhere('title', 'LIKE', $keyWord)
-						->orWhere('description', 'LIKE', $keyWord)
-						->orWhere('year', 'LIKE', $keyWord)
-						->orWhere('illustrator_id', 'LIKE', $keyWord)
-						->paginate(10),
+            'illustrations' => Illustration::where('user_id', Auth::user()->id)->get()->all()
+
         ]);
     }
 	
@@ -58,9 +54,10 @@ class Illustrations extends Component
         Illustration::create([ 
 			'genre' => $this-> genre,
 			'title' => $this-> title,
+
 			'description' => $this-> description,
 			'year' => $this-> year,
-			'illustrator_id' => User::find(Auth::id())->id //Illustrator::find(Auth::id())->id
+			'user_id' => User::find(Auth::id())->id //Illustrator::find(Auth::id())->id
         ]);
         
         $this->resetInput();
@@ -78,6 +75,7 @@ class Illustrations extends Component
 		$this->description = $record-> description;
 		$this->year = $record-> year;
 		$this->illustrator_id = $record-> illustrator_id;
+
 		
         $this->updateMode = true;
     }
@@ -99,6 +97,7 @@ class Illustrations extends Component
 			'description' => $this-> description,
 			'year' => $this-> year,
 			'illustrator_id' => $this-> illustrator_id
+
             ]);
 
             $this->resetInput();

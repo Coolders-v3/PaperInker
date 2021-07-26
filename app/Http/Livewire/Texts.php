@@ -14,7 +14,7 @@ class Texts extends Component
     use WithPagination;
 
 	protected $paginationTheme = 'bootstrap';
-    public $selected_id, $keyWord, $genre, $title, $description, $year, $writer_id;
+    public $selected_id, $keyWord, $genre, $title, $description, $year, $user_id;
     public $updateMode = false;
 
     public function render()
@@ -22,18 +22,14 @@ class Texts extends Component
     {   
         
 		$keyWord = '%'.$this->keyWord .'%';
+        $texts = Text::where('user_id', Auth::user()->id)->get()->all();
+        
 
-        //if ('writer_id' == Writer::find(Auth::id())->id) {
         return view('livewire.texts.view', [
-            'texts' => Text::latest()
-						->orWhere('genre', 'LIKE', $keyWord)
-						->orWhere('title', 'LIKE', $keyWord)
-						->orWhere('description', 'LIKE', $keyWord)
-						->orWhere('year', 'LIKE', $keyWord)
-						->orWhere('writer_id', 'LIKE', $keyWord)
-						->paginate(10),
+            'texts' => $texts
+						
         ]);
-    //}
+
     }
 	
     public function cancel()
@@ -48,7 +44,7 @@ class Texts extends Component
 		$this->title = null;
 		$this->description = null;
 		$this->year = null;
-		$this->writer_id = null;
+		$this->user_id = null;
     }
 
     public function store()
@@ -66,7 +62,7 @@ class Texts extends Component
 			'title' => $this-> title,
 			'description' => $this-> description,
 			'year' => $this-> year,
-			'writer_id' => User::find(Auth::id())->id
+			'user_id' => User::find(Auth::id())->id
         ]);
         
         $this->resetInput();
@@ -83,7 +79,7 @@ class Texts extends Component
 		$this->title = $record-> title;
 		$this->description = $record-> description;
 		$this->year = $record-> year;
-		$this->writer_id = $record-> writer_id;
+		$this->user_id = $record-> user_id;
 		
         $this->updateMode = true;
     }
@@ -104,7 +100,7 @@ class Texts extends Component
 			'title' => $this-> title,
 			'description' => $this-> description,
 			'year' => $this-> year,
-			'writer_id' => $this-> writer_id
+			'user_id' => $this-> user_id
             ]);
 
             $this->resetInput();
@@ -125,7 +121,7 @@ class Texts extends Component
         if (User::find(Auth::id())->isWriter == true) {
 
             return Writer::create(['user_id' => User::find(Auth::id())->id]);
-            //return view('profileViews.writerProfile', ["texts"=>$service]);
+            //return view('profileViews.userProfile', ["texts"=>$service]);
         }
 
             return Illustrator::create(['user_id' => User::find(Auth::id())->id]);

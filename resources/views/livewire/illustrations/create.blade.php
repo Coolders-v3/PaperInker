@@ -26,12 +26,19 @@
                 <label for="year"></label>
                 <input wire:model="year" type="text" class="form-control" id="year" placeholder="Year">@error('year') <span class="error text-danger">{{ $message }}</span> @enderror
             </div>
+            <div>
+                <label for="favorite" type=text class="">Favorite Slider</label>
+            </div>
+            <div class="switch-button">                
+                <input type="checkbox" name="switch-button" id="switch-label" class="switch-button__checkbox">
+                <label for="switch-label" class="switch-button__label"></label>
+            </div>
             
                 </form>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary close-btn" data-dismiss="modal">Close</button>
-                <button type="button" wire:click.prevent="store()" class="btn btn-primary close-modal">Save</button>
+                <button type="button" wire:click.prevent="store()" class="btn btn-primary close-modal" data-dismiss="modal">Save</button>
             </div>
         </div>
     </div>

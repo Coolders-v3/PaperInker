@@ -18,14 +18,14 @@ class Illustration extends Model
         'title',
         'description',
         'year',
-        'illustrator_id'];
+        'user_id'];
 	
     
     
-    public function illustrator()
+    /* public function illustrator()
     {
         return $this->belongsTo(Illustrator::class); 
-    }
+    } */
     /**
       * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
