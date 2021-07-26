@@ -54,6 +54,14 @@ class User extends Authenticatable
         return $this->hasOne(Illustrator::class); 
     }
 
+    public function texts() {
+        return $this->hasMany(Text::class);
+    }
+
+    public function illustrations() {
+        return $this->hasMany(Illustration::class);
+    }
+
     /* public function createProfile() {
         
         if (User::find(Auth::id())->isWriter == true) {
