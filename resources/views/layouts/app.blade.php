@@ -33,12 +33,15 @@
                     alt="logo-user">
                 </a>  --}}
             
-                <div class="flex justify-center  sm:pt-0 contenedor-logo-home-index"> 
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        <img class="logo-home-index"
-                        src="{{ asset('images/logo-home.png') }}" 
-                        alt="logo-user">
-                    </a> 
+                
+                <div class="max-w-6xl mx-auto sm:px-6 lg:px-8 body-index">
+                    <div class="flex justify-center  sm:pt-0 contenedor-logo-home-index"> 
+                        <a class="navbar-brand" href="{{ url('/') }}">
+                            <img class="logo-home-index"
+                            src="{{ asset('images/logo-home.png') }}" 
+                            alt="logo-user">
+                        </a> 
+                    </div>
                 </div>     
             
                 
