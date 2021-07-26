@@ -20,8 +20,8 @@ class CreateIllustrationsTable extends Migration
             $table->string('description');
             $table->year('year');
             $table->boolean('favorite')->default(0);
-            $table->unsignedBigInteger('illustrator_id')->nullable();
-           // $table->foreign('illustrator_id')->references('id')->on('illustrators')->onUpdate('cascade')->onDelete('cascade');
+            $table->unsignedBigInteger('user_id')->nullable();
+            $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }
