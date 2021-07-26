@@ -13,6 +13,7 @@ class UserSlides extends Component
   public $user;
   public $userDescription;
   public $userImg;
+  public $highlightedWork;
 
   public function getRandomProfile()
   {
@@ -44,14 +45,28 @@ class UserSlides extends Component
     }
   }
 
+  public function getHighlightedWork()
+  {
+    $loggedUser = Auth::user();
+    if ($loggedUser->isWriter) {
+      $this->highlightedWork = $this->user->illustrations->favorite;
+    }
+
+    if (!$loggedUser->isWriter) {
+      $this->highlightedWork = $this->user->texts->favorite;
+    }
+  }
+
   public function render()
   {
     $this->getRandomProfile();
+    $this->getHighlightedWork();
 
     return view('livewire.user.user-slides', [
       'user' => $this->user,
       'userDescription' => $this->userDescription,
-      'userImg' => $this->userImg
+      'userImg' => $this->userImg,
+      'highlightedWork' => $this->highlightedWork
     ]);
   }
 }
