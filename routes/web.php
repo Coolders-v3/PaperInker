@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\ReadWriter;
 use Illuminate\Support\Facades\Auth;
@@ -21,7 +22,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('home', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth')->name('home');
+//Route::get('home', [App\Http\Controllers\HomeController::class, 'indexW'])->middleware('auth')->name('texts');
 //Route Hooks - Do not delete//
 Route::view('illustrations', 'livewire.illustrations.index')->middleware('auth')->name('illustrations');
 Route::view('texts', 'livewire.texts.index')->middleware('auth')->name('texts');
+
+

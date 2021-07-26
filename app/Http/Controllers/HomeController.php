@@ -9,6 +9,7 @@ use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Writer;
 use App\Models\Illustrator;
+use App\Models\Http\Livewire;
 
 
 class HomeController extends Controller
@@ -30,36 +31,41 @@ class HomeController extends Controller
      */
     
     public function index()
-    {
-        $texts = Text::all();
-        $illustrations = Illustration::all();
+
+    {    //$texts = Text::where('user_id', Auth::user()->id)->get()->all();
+
+       // $loggedUser = User::auth();
+        $texts = Text::where('user_id', Auth::user()->id)->get()->all();
+        $illustrations = Illustration::where('user_id', Auth::user()->id)->get()->all();
 
         
-       if (User::find(Auth::id())->isWriter == true && count(Text::all()) == 0) {
+       if (User::find(Auth::id())->isWriter == true && count($texts) == 0) {
 
             Writer::create(['user_id' => User::find(Auth::id())->id]);
-            return view ('home');
+            return view ('home', ['texts' => $texts]);
             //return view('livewire.texts.view', ['texts' => $texts]);
         }
-        if (User::find(Auth::id())->isWriter == true && count(Text::all()) != 0) {
-            return view ('home');
+        if (User::find(Auth::id())->isWriter == true && count($texts) != 0){
+            return view ('home',  ['texts' => $texts]);
             //return view('livewire.texts.view', ['texts' => $texts]);
         }
 
-        if (User::find(Auth::id())->isWriter == false && count(Illustration::all()) == 0) { 
+        if (User::find(Auth::id())->isWriter != true && count($illustrations) == 0) { 
 
             Illustrator::create(['user_id' => User::find(Auth::id())->id]);
-            return view ('home');
+            return view ('home',  ['illustrations' => $illustrations]);
             //return view('livewire.illustrations.view', ['illustrations' => $illustrations]);}
         
-        if (User::find(Auth::id())->isWriter == false && count(Illustration::all()) != 0) {
+            if (User::find(Auth::id())->isWriter != true && count($illustrations) != 0) {
                 
-            return view ('home');
+            return view ('home', ['illustrations' => $illustrations]);
             //return view('livewire.illustrations.view', ['illustrations' => $illustrations]);
             }
-            return view ('home');
+           // return view ('home');
         }
     }
+
+      
 }
 
 

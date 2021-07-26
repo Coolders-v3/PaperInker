@@ -15,12 +15,13 @@ class CreateIllustrationsTable extends Migration
     {
         Schema::create('illustrations', function (Blueprint $table) {
             $table->id();
-            $table->string('jobGenre');
+            $table->string('genre');
             $table->string('title');
-            $table->string('jobIllustration');
-            $table->date('yearOfCreation');
-            $table->unsignedBigInteger('illustrator_id')->nullable();
-           // $table->foreign('illustrator_id')->references('id')->on('illustrators')->onUpdate('cascade')->onDelete('cascade');
+            $table->string('description');
+            $table->year('year');
+            $table->boolean('favorite')->default(0);
+            $table->unsignedBigInteger('user_id')->nullable();
+            $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }
