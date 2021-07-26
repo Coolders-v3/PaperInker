@@ -1,3 +1,4 @@
+@extends('layouts.app')
 @section('title', __('Texts'))
 <div class="container-fluid">
     @include('livewire.user.user')
