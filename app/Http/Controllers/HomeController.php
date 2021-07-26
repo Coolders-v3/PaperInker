@@ -34,22 +34,38 @@ class HomeController extends Controller
 
     {    //$texts = Text::where('user_id', Auth::user()->id)->get()->all();
 
-        if (User::find(Auth::id())->isWriter == true) {
+       // $loggedUser = User::auth();
+        $texts = Text::where('user_id', Auth::user()->id)->get()->all();
+        $illustrations = Illustration::where('user_id', Auth::user()->id)->get()->all();
 
+        
+       if (User::find(Auth::id())->isWriter == true && count($texts) == 0) {
+
+            Writer::create(['user_id' => User::find(Auth::id())->id]);
             return view ('home');
             //return view('livewire.texts.view', ['texts' => $texts]);
         }
-        
-        if (User::find(Auth::id())->isWriter == false) { 
+        if (User::find(Auth::id())->isWriter == true && count($texts) != 0){
+            return view ('home');
+            //return view('livewire.texts.view', ['texts' => $texts]);
+        }
 
+        if (User::find(Auth::id())->isWriter == true && count($illustrations) == 0) { 
+
+            Illustrator::create(['user_id' => User::find(Auth::id())->id]);
             return view ('home');
             //return view('livewire.illustrations.view', ['illustrations' => $illustrations]);}
         
-        
+            if (User::find(Auth::id())->isWriter == true && count($illustrations) != 0) {
+                
+            return view ('home');
+            //return view('livewire.illustrations.view', ['illustrations' => $illustrations]);
+            }
             return view ('home');
         }
-        return view ('home');
     }
+
+      
 }
 
 
