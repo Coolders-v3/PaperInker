@@ -22,18 +22,14 @@ class Texts extends Component
     {   
         
 		$keyWord = '%'.$this->keyWord .'%';
+        $texts = Text::where('user_id', Auth::user()->id)->get()->all();
+        
 
-        //if ('user_id' == Writer::find(Auth::id())->id) {
         return view('livewire.texts.view', [
-            'texts' => Text::latest()
-						->orWhere('genre', 'LIKE', $keyWord)
-						->orWhere('title', 'LIKE', $keyWord)
-						->orWhere('description', 'LIKE', $keyWord)
-						->orWhere('year', 'LIKE', $keyWord)
-						->orWhere('user_id', 'LIKE', $keyWord)
-						->paginate(10),
+            'texts' => $texts
+						
         ]);
-    //}
+
     }
 	
     public function cancel()

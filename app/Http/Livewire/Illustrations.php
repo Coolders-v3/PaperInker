@@ -22,13 +22,8 @@ class Illustrations extends Component
     {
 		$keyWord = '%'.$this->keyWord .'%';
         return view('livewire.illustrations.view', [
-            'illustrations' => Illustration::latest()
-						->orWhere('genre', 'LIKE', $keyWord)
-						->orWhere('title', 'LIKE', $keyWord)
-						->orWhere('description', 'LIKE', $keyWord)
-						->orWhere('year', 'LIKE', $keyWord)
-						->orWhere('illustrator_id', 'LIKE', $keyWord)
-						->paginate(10),
+            'illustrations' => Illustration::where('user_id', Auth::user()->id)->get()->all()
+
         ]);
     }
 	
@@ -59,6 +54,7 @@ class Illustrations extends Component
         Illustration::create([ 
 			'genre' => $this-> genre,
 			'title' => $this-> title,
+
 			'description' => $this-> description,
 			'year' => $this-> year,
 			'illustrator_id' => User::find(Auth::id())->id //Illustrator::find(Auth::id())->id

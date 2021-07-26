@@ -23,10 +23,10 @@ class Text extends Model
     ];
 
 
-/*     public function writer(){
-        return $this->belongsTo(Writer::class); 
+public function user(){
+        return $this->belongsTo(User::class, 'user_id'); 
     }
-	 */
+	
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */

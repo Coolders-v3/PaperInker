@@ -39,7 +39,7 @@
 							</tr>
 						</thead>
 						<tbody>
-							@foreach($illustrations as $row)
+							@foreach($illustrations as $illustration)
 							<article class="samples">
 								<div class="sampleCard">
 									<div class="btn-group dropend dropDownMenu">
@@ -48,14 +48,15 @@
 		
 										</button>
 										<ul class="dropdown-menu">
-										<li><a data-toggle="modal" data-target="#updateModal" class="dropdown-item" wire:click="edit({{$row->id}})"><i class="fa fa-edit"></i> Edit </a>
+										<li><a data-toggle="modal" data-target="#updateModal" class="dropdown-item" wire:click="edit({{$illustration->id}})"><i class="fa fa-edit"></i> Edit </a>
 										</li>
-										<li><a class="dropdown-item" onclick="confirm('Confirm Delete Illustration id {{$row->id}}? \nDeleted Illustrations cannot be recovered!')||event.stopImmediatePropagation()" wire:click="destroy({{$row->id}})"><i class="fa fa-trash"></i> Delete </a>
+										<li><a class="dropdown-item" onclick="confirm('Confirm Delete Illustration id {{$illustration->id}}? \nDeleted Illustrations cannot be recovered!')||event.stopImmediatePropagation()" wire:click="destroy({{$illustration->id}})"><i class="fa fa-trash"></i> Delete </a>
 										</li>
 										</ul>
 									</div>
 								<figure class="sampleImg">
-									<img src="{{ $row->description }}">
+									<img src="{{ $illustration->description }}">
+
 								</figure>
 								
 								</div>
@@ -63,7 +64,7 @@
 							@endforeach
 						</tbody>
 					</table>						
-					{{ $illustrations->links() }}
+				{{-- 	{{ $illustrations->links() }} --}}
 					</div>
 				</div>
 			</div>
