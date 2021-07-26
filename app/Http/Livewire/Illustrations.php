@@ -57,7 +57,7 @@ class Illustrations extends Component
 
 			'description' => $this-> description,
 			'year' => $this-> year,
-			'illustrator_id' => User::find(Auth::id())->id //Illustrator::find(Auth::id())->id
+			'user_id' => User::find(Auth::id())->id //Illustrator::find(Auth::id())->id
         ]);
         
         $this->resetInput();
