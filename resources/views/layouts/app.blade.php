@@ -27,11 +27,22 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm ">
             <div class="container">
-               <a class="navbar-brand" href="{{ url('/') }}">
+              {{--  <a class="navbar-brand" href="{{ url('/') }}">
                     <img class="logo-home-index"
                     src="{{ asset('images/logo-user.png') }}" 
                     alt="logo-user">
-                </a> 
+                </a>  --}}
+            
+                <div class="flex justify-center  sm:pt-0 contenedor-logo-home-index"> 
+                    <a class="navbar-brand" href="{{ url('/') }}">
+                        <img class="logo-home-index"
+                        src="{{ asset('images/logo-home.png') }}" 
+                        alt="logo-user">
+                    </a> 
+                </div>     
+            
+                
+
                 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -71,15 +82,15 @@
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                        onclick="event.preventDefault();
+                                                document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>                                
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
                                 </div>
-                            </li>
+                                </li>
                         @endguest
                     </ul>
                 </div>

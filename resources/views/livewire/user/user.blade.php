@@ -3,7 +3,7 @@
   <section class="profile">
     <div class="profilePic">
       <figure>
-        <img
+        <img class= "img-user"
           src="https://estaticos.muyinteresante.es/media/cache/760x570_thumb/uploads/images/article/55365cde3787b2187a1f0fbc/impresion-cara.jpg"
           alt=""
         >

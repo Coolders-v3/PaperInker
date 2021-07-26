@@ -1,6 +1,7 @@
 
 @section('title', __('Texts'))
 <div class="container-fluid">
+    @include('livewire.user.header-logo')
     @include('livewire.user.user')
     <div class="row justify-content-center">
         <div class="col-md-12">
