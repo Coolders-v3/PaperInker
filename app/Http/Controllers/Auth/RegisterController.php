@@ -94,7 +94,7 @@ class RegisterController extends Controller
       return Writer::create(['user_id' => User::find(Auth::id())->id]);
       //return view('profileViews.writerProfile', ["texts"=>$service]);
     }
-
+    
     return Illustrator::create(['user_id' => User::find(Auth::id())->id]);
     // return view('profileViews.illustratorProfile', ["texts"=>$service]); //origanizar rutas
 
