@@ -16,7 +16,6 @@
 						@if (session()->has('message'))
 						<div wire:poll.4s class="btn btn-sm btn-success" style="margin-top:0px; margin-bottom:0px;"> {{ session('message') }} </div>
 						@endif
-						
 						<div class="btn btn-sm btn-info" data-toggle="modal" data-target="#exampleModal">
 						<i class="fa fa-plus"></i>  Add Illustrations
 						</div>

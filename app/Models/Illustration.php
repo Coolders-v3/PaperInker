@@ -22,10 +22,10 @@ class Illustration extends Model
 	
     
     
-    public function illustrator()
+    /* public function illustrator()
     {
         return $this->belongsTo(Illustrator::class); 
-    }
+    } */
     /**
       * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */

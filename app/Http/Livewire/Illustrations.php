@@ -14,6 +14,7 @@ class Illustrations extends Component
     use WithPagination;
 
 	protected $paginationTheme = 'bootstrap';
+
     public $selected_id, $keyWord, $genre, $title, $description, $year, $illustrator_id;
     public $updateMode = false;
 
@@ -78,6 +79,7 @@ class Illustrations extends Component
 		$this->description = $record-> description;
 		$this->year = $record-> year;
 		$this->illustrator_id = $record-> illustrator_id;
+
 		
         $this->updateMode = true;
     }
@@ -99,6 +101,7 @@ class Illustrations extends Component
 			'description' => $this-> description,
 			'year' => $this-> year,
 			'illustrator_id' => $this-> illustrator_id
+
             ]);
 
             $this->resetInput();
