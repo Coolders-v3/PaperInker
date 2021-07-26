@@ -1,4 +1,6 @@
-<div>
+//info como componente//
+
+<!-- <div>3
   <section class="profile">
     <div class="profilePic">
       <figure>
@@ -13,4 +15,4 @@
       Tell us something about you...
     </p>
   </section>
-</div>
+</div> -->
