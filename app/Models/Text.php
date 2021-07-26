@@ -19,12 +19,12 @@ class Text extends Model
         'title',
         'description',
         'year',
-        'writer_id'
+        'user_id'
     ];
 
 
-    public function writer(){
-        return $this->belongsTo(Writer::class); 
+public function user(){
+        return $this->belongsTo(User::class, 'user_id'); 
     }
 	
     /**
