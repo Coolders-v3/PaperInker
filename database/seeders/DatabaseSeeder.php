@@ -23,6 +23,6 @@ class DatabaseSeeder extends Seeder
         //Illustrator::factory(5)->create();
         //Illustration::factory(5)->create();
         User::factory()->create(['email'=>'escritor@gmail.com']);
-        User::factory()->create(['email'=>'ilustrador@gmail.com', 'isWriter'=>false]);
+        User::factory()->create(['email'=>'ilustrador@gmail.com', 'isWriter' => false]);
 }
 }
