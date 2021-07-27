@@ -24,23 +24,23 @@ class UserSlides extends Component
 
     if ($loggedUser->isWriter) {
       $this->user = $users->where('isWriter', false)
-        ->random(1)[0];
+        ->random(1)->first();
 
-      $this->userDescription = $illustrators->where('user_id', $this->user->id)[0]
+      $this->userDescription = $illustrators->where('user_id', $this->user->id)->first()
         ->personaldescription;
 
-      $this->userImg = $illustrators->where('user_id', $this->user->id)[0]
+      $this->userImg = $illustrators->where('user_id', $this->user->id)->first()
         ->personalImage;
     }
 
     if (!$loggedUser->isWriter) {
       $this->user = $users->where('isWriter', true)
-        ->random(1)[0];
+        ->random(1)->first();
 
-      $this->userDescription = $writers->where('user_id', $this->user->id)[0]
+      $this->userDescription = $writers->where('user_id', $this->user->id)->first()
         ->personaldescription;
 
-      $this->userImg = $writers->where('user_id', $this->user->id)[0]
+      $this->userImg = $writers->where('user_id', $this->user->id)->first()
         ->personalImage;
     }
   }
@@ -49,11 +49,11 @@ class UserSlides extends Component
   {
     $loggedUser = Auth::user();
     if ($loggedUser->isWriter) {
-      $this->highlightedWork = $this->user->illustrations->favorite;
+      $this->highlightedWork = $this->user->illustrations->where('favorite', true)->first();
     }
 
     if (!$loggedUser->isWriter) {
-      $this->highlightedWork = $this->user->texts->favorite;
+      $this->highlightedWork = $this->user->texts->where('favorite', true)->first();
     }
   }
 

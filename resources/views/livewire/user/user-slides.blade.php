@@ -3,13 +3,13 @@
   <div>
     <section class="profile">
       <div class="profilePic">
-        <figure>
+        <figure style="max-width:50px;">
           <img src="{{ $userImg }}" alt="">
         </figure>
         <span class="name">{{ $user->name }}</span>
       </div>
       <p class="description">
-        {{ $userDescription }}
+        {{ $userDescription . $highlightedWork->title }}
       </p>
     </section>
   </div>
@@ -29,7 +29,7 @@
     @endif
   </section>
   <div class="slideButtons">
-    <span class="iconify likeBtn" data-icon="cil:heart" data-inline="false"></span>
+    <a href="{{ url('/slides') }}"><span class="iconify likeBtn" data-icon="cil:heart" data-inline="false"></span></a>
     <span class="iconify nextBtn" data-icon="bi:x-lg" data-inline="false"></span>
   </div>
 @endsection
