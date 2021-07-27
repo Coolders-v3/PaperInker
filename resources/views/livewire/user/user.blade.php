@@ -16,16 +16,16 @@
   @livewireScripts
 
 <div class="container">
-//@livewire('image-upload')
+  @include('livewire.user.image-upload')
       <div class="form-group">
       <lavel for="personaldescription">Tell us something about you</lavel>
       <textarea wire:model= "file" name="personaldescription" id="personaldescription" cols="30" rows="10" class="form-control"></textarea>
       </div>
       <div class="form-group">
-        <a href="{{ route ('store') }}">
+        {{-- <a href="{{ route ('store') }}">
           <button type="submit" name="save-user-bio" class="btn btn-primary btn-block">
         That's all</button>
-      </a>
+      </a> --}}
         
       </div>
 
