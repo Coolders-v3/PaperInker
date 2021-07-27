@@ -17217,3 +17217,11 @@ border-radius: 60%;
   left: 0%;
   
 }
+.infoUserText.form-control::placeholder {
+  font-weight: 300;
+}
+.shadow-textarea textarea.form-control {
+  border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
+  padding-left: 0.8rem;
+  
+}
