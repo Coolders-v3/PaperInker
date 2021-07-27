@@ -1,4 +1,3 @@
-{{-- //info como componente// --}}
 
   <section class="profile">
     <div class="profilePic">
