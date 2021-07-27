@@ -9,7 +9,7 @@
        @include('livewire.texts.update', ['texts' => $texts])
       
    
-} @elseif (Auth::user()->isWriter != true) {
+} @elseif (Auth::user()->isWriter == false) {
     @include('livewire.illustrations.view', ['illustrations' => $illustrations])
       @include('livewire.illustrations.create', ['illustrations' => $illustrations])
         @include('livewire.illustrations.index', ['illustrations' => $illustrations])
