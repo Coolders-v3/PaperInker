@@ -1,4 +1,3 @@
-
 @section('title', __('Texts'))
 <div class="container-fluid">
     @include('livewire.user.header-logo')
