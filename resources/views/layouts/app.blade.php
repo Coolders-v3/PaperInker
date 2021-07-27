@@ -27,7 +27,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm ">
             <div class="container">
-              {{--  <a class="navbar-brand" href="{{ url('/') }}">
+               {{-- <a class="navbar-brand" href="{{ url('/') }}">
                     <img class="logo-home-index"
                     src="{{ asset('images/logo-user.png') }}" 
                     alt="logo-user">
@@ -43,7 +43,7 @@
                         </a> 
                     </div>
                 </div>     
-            
+             
                 
 
                 
