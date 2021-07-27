@@ -1,15 +1,16 @@
 <?php
 
 namespace App\Http\Controllers;
-namespace App\Http\Controllers\Auth;
 
 use App\Models\Writer;
 use Illuminate\Http\Request;
-use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
 class WriterController extends Controller
 {
+
+    public $personaldescription;
+
     /**
      * Display a listing of the resource.
      *
@@ -61,9 +62,15 @@ class WriterController extends Controller
      * @param  \App\Models\Writer  $writer
      * @return \Illuminate\Http\Response
      */
-    public function edit(Writer $writer)
+    public function edit(Writer $writer, $id)
     {
-        //
+       
+    $writer = Writer::where('user_id', Auth::user()->id)->get()->all();   
+
+    $writer = Writer::findOrFail($id);
+    
+    return view('home');
+        
     }
 
     /**
@@ -75,7 +82,9 @@ class WriterController extends Controller
      */
     public function update(Request $request, Writer $writer)
     {
-        //
+        Writer::create([ 
+            'personaldescription' => $this-> personaldescription
+        ]);
     }
 
     /**

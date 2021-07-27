@@ -18,6 +18,8 @@ class Illustrations extends Component
     public $selected_id, $keyWord, $genre, $title, $description, $year, $illustrator_id;
     public $updateMode = false;
 
+    public $file;
+
     public function render()
     {
 		$keyWord = '%'.$this->keyWord .'%';
@@ -54,7 +56,6 @@ class Illustrations extends Component
         Illustration::create([ 
 			'genre' => $this-> genre,
 			'title' => $this-> title,
-
 			'description' => $this-> description,
 			'year' => $this-> year,
 			'user_id' => User::find(Auth::id())->id //Illustrator::find(Auth::id())->id

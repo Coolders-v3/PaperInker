@@ -4,9 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Models\Illustrator;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class IllustratorController extends Controller
 {
+
+    public $personaldescription;
+
     /**
      * Display a listing of the resource.
      *
@@ -55,9 +59,14 @@ class IllustratorController extends Controller
      * @param  \App\Models\Illustrator  $illustrator
      * @return \Illuminate\Http\Response
      */
-    public function edit(Illustrator $illustrator)
+    public function edit( $illustrator, $id)
     {
-        //
+
+    $illustrator = Illustrator::where('user_id', Auth::user()->id)->get()->all(); 
+
+    $illustrator = Illustrator::findOrFail($id);
+    
+    return view('home');
     }
 
     /**
@@ -69,7 +78,9 @@ class IllustratorController extends Controller
      */
     public function update(Request $request, Illustrator $illustrator)
     {
-        //
+        Illustrator::create([ 
+            'personaldescription' => $this-> personaldescription
+        ]);
     }
 
     /**
