@@ -14,8 +14,9 @@
                         <div wire:poll.4s class="btn btn-sm btn-success" style="margin-top:0px; margin-bottom:0px;"> {{ session('message') }} </div>
                         @endif
                         <div>
-							<button type="button" class="btn-find" >
-								Find your Illustrattor!
+							<a href="{{ url('/slides') }}">
+                                <button type="button" class="btn-find" >
+                                Find your Writer!</a>
 						</div>
                         <div class="btn btn-sm btn-info" data-toggle="modal" data-target="#exampleModal">
                         <i class="fa fa-plus"></i>  Add Text
