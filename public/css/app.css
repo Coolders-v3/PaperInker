@@ -17156,12 +17156,49 @@ body.swal2-toast-shown .swal2-container.swal2-bottom-right {
 .writerSample {
   background-color: #e0dfd7;
   border-radius: 7px;
-  border: solid 0.5px #e0dfd7;
+  border: solid 0.5px #ceccc6;
   margin: 15px;
   padding: 15px;
   font-family: "Kaushan Script", sans-serif;
   font-size: 18px;
   color: #414141;
+}
+
+.illustratorSample,
+.illustratorSample figure img {
+  max-width: 100%;
+}
+
+.illustratorSample {
+  margin: 30px 15px 30px 15px;
+  position: relative;
+}
+
+.imgInfo {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  top: 0;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  /* text-align: center; */
+  /* line-height: 80vh; */
+  color: white;
+  background-color: rgba(0, 0, 0, 0.25);
+  /* font-size: 42px; */
+  /* font-weight: 700; */
+  opacity: 0;
+  transition: opacity 1s;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.imgInfo:hover {
+  opacity: 1;
 }
 
 .slideButtons {
@@ -17178,13 +17215,10 @@ body.swal2-toast-shown .swal2-container.swal2-bottom-right {
   font-size: 40px;
 }
 
-/* body {
-  background-color: #E7E1F4;
-}
-
-.likeBtn,
-.crossBtn {
-  font-size: 42px;
+.slideBtnLinks,
+.slideBtnLinks:focus {
+  text-decoration: none;
+  color: black;
 }
 
 .buttons {
@@ -17198,15 +17232,18 @@ body.swal2-toast-shown .swal2-container.swal2-bottom-right {
 
 .profilePic {
   margin: 0 10px 0 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .profilePic,
 .profilePic img {
-  max-width: 100px;
+  width: 85px;
 }
 
 .profile {
   display: flex;
+  margin-top: 20px;
 }
 
 .userDescription {
@@ -17215,14 +17252,35 @@ body.swal2-toast-shown .swal2-container.swal2-bottom-right {
 
 .userName {
   font-weight: 700;
+  text-align: center;
 }
 
-.writerSample {
-  margin-bottom: 12vh;
-  padding-left: 15px;
-  margin-top: 30px;
-  background-color: white;
+/* .logo-user-component {
+  position: absolute;
+  width: 68px;
+  left: 13px;
+  top: 12px;
+  height: 70px;
+}
+
+.container-header-logo {
+  position: absolute;
+  width: 1340px;
+  height: 95px;
+  left: 0px;
+  top: -90px;
+  background: rgba(196, 196, 196, 0.38);
+  border-radius: 12px;
+}
+
+.img-user {
+  width: 68px;
+  height: 70px;
+  left: 45px;
+  margin-top: 100px;
 } */
+
+/* @import 'components/writerProfile'; */
 
 /* .color-body {
     background-color: #E7E1F4 !important;
@@ -17261,4 +17319,18 @@ body.swal2-toast-shown .swal2-container.swal2-bottom-right {
     width: 129px;
     height: 50px;
 } */
+
+body {
+  height: 100vh;
+  background-color: #E7E1F4;
+}
+
+#app {
+  height: 100%;
+  background: #E7E1F4;
+}
+
+.purplebg {
+  background-color: #E7E1F4;
+}
 

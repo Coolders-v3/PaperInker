@@ -1,2 +1,36 @@
 @import './writerSample.scss';
+@import './illustratorSample.scss';
 @import './slideButtons.scss';
+.buttons {
+  position: fixed;
+  bottom: 25px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.profilePic {
+  margin: 0 10px 0 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.profilePic,
+.profilePic img {
+  width: 85px;
+}
+
+.profile {
+  display: flex;
+  margin-top: 20px;
+}
+
+.userDescription {
+  margin: 0 10px 0 10px;
+}
+
+.userName {
+  font-weight: 700;
+  text-align: center;
+}

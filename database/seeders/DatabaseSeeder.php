@@ -200,7 +200,7 @@ class DatabaseSeeder extends Seeder
     Illustration::factory()->create([
       'genre' => 'genre',
       'title' => 'illustrator1 art',
-      'description' => 'This is an artwork made by illustrator1',
+      /* 'description' => 'This is an artwork made by illustrator1', */
       'year' => '2020',
       'favorite' => true,
       'user_id' => 6,
@@ -209,7 +209,7 @@ class DatabaseSeeder extends Seeder
     Illustration::factory()->create([
       'genre' => 'genre',
       'title' => 'illustrator2 art',
-      'description' => 'This is an artwork made by illustrator2',
+      /* 'description' => 'This is an artwork made by illustrator2', */
       'year' => '2020',
       'favorite' => true,
       'user_id' => 7,
@@ -218,7 +218,7 @@ class DatabaseSeeder extends Seeder
     Illustration::factory()->create([
       'genre' => 'genre',
       'title' => 'illustrator3 art',
-      'description' => 'This is an artwork made by illustrator3',
+      /* 'description' => 'This is an artwork made by illustrator3', */
       'year' => '2020',
       'favorite' => true,
       'user_id' => 8,
@@ -227,7 +227,7 @@ class DatabaseSeeder extends Seeder
     Illustration::factory()->create([
       'genre' => 'genre',
       'title' => 'illustrator4 art',
-      'description' => 'This is an artwork made by illustrator4',
+      /* 'description' => 'This is an artwork made by illustrator4', */
       'year' => '2020',
       'favorite' => true,
       'user_id' => 9,
@@ -236,7 +236,7 @@ class DatabaseSeeder extends Seeder
     Illustration::factory()->create([
       'genre' => 'genre',
       'title' => 'illustrator5 art',
-      'description' => 'This is an artwork made by illustrator5',
+      /* 'description' => 'This is an artwork made by illustrator5', */
       'year' => '2020',
       'favorite' => true,
       'user_id' => 10,
