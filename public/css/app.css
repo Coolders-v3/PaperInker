@@ -17860,3 +17860,30 @@ body.swal2-toast-shown .swal2-container.swal2-bottom-right {
   left: 0%;
 }
 
+.logo-user-component{
+  position: absolute;
+  width: 68px;
+  left: 13px;
+  top: 12px;
+  height: 70px; 
+}
+
+.container-header-logo{
+  position: absolute;
+  width: 1340px;
+  height: 95px;
+  left: 0px;
+  top: -90px;
+  background: rgba(196, 196, 196, 0.38);
+  border-radius: 12px;
+}
+
+.img-user{
+
+  width: 68px;
+  height: 70px;
+  left: 45px;
+  margin-top: 100px;
+}
+
+
