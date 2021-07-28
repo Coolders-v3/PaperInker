@@ -17280,6 +17280,15 @@ body.swal2-toast-shown .swal2-container.swal2-bottom-right {
   margin-top: 100px;
 } */
 
+.logo-user-component {
+  max-width: 50px;
+  margin-left: 10px;
+}
+
+.navbar {
+  padding: 0;
+}
+
 /* @import 'components/writerProfile'; */
 
 /* .color-body {
