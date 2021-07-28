@@ -77,7 +77,7 @@
       </div>
     </div>
   </nav>
-  <main class="py-2">
+  <main class="py-2 purplebg">
     @yield('content')
   </main>
 </div>

@@ -6,5 +6,20 @@
 @import '../css/app.css';
 @import '~sweetalert2/src/sweetalert2.scss';
 @import 'components/userSlides/userSlides.scss';
-@import 'components/writerProfile';
+
+/* @import 'components/writerProfile'; */
+
 @import 'components/home-index';
+body {
+  height: 100vh;
+  background-color: #E7E1F4;
+}
+
+#app {
+  height: 100%;
+  background: #E7E1F4;
+}
+
+.purplebg {
+  background-color: #E7E1F4;
+}

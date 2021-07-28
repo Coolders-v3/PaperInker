@@ -11,3 +11,9 @@
 .nextBtn {
   font-size: 40px;
 }
+
+.slideBtnLinks,
+.slideBtnLinks:focus {
+  text-decoration: none;
+  color: black;
+}
