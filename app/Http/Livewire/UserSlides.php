@@ -21,12 +21,15 @@ class UserSlides extends Component
     $users = User::all();
     $writers = Writer::all();
     $illustrators = Illustrator::all();
-    $illustratorAgentId = Illustrator::where('user_id', Auth::user()->id)->get()[0]->id;
-    $writerLiked = $users->where('isWriter', true)
-    ->random(1)->first()->id;
+
+ 
+
     
 
     if ($loggedUser->isWriter) {
+
+      $writerAgentId = Writer::where('user_id', Auth::user()->id)->get()->first()->id;
+
       $this->user = $users->where('isWriter', false)
         ->random(1)->first();
       
@@ -37,10 +40,21 @@ class UserSlides extends Component
 
       $this->userImg = $illustrators->where('user_id', $this->user->id)->first()
         ->personalImage;
+
+        $willustratorLiked = $illustrators->where('user_id', $this->user->id)->first();
+        $illustratorLikedId = $writers->where('user_id', $this->user->id)->first()->id;
+        $writerAgent = Illustrator::where('user_id', Auth::user()->id)->first();
+        
+        $writerAgent->illustrators()->attach($illustratorLikedId);
+        
+       
+
+       // dd($writerAgentId, $illustratorLikedId);
     }
 
     if (!$loggedUser->isWriter) {
       
+      $illustratorAgentId = Illustrator::where('user_id', Auth::user()->id)->get()->first()->id;
 
       $this->user = $users->where('isWriter', true)
         ->random(1)->first();
@@ -51,9 +65,16 @@ class UserSlides extends Component
       $this->userImg = $writers->where('user_id', $this->user->id)->first()
         ->personalImage;
       
-        $writerLikedId = $writers->where('user_id', $this->user->id)->first()->id;
 
-        dd($illustratorAgentId, $writerLikedId);
+        $writerLiked = $writers->where('user_id', $this->user->id)->first();
+        $writerLikedId = $writers->where('user_id', $this->user->id)->first()->id;
+        $illustratorAgent = Illustrator::where('user_id', Auth::user()->id)->first();
+        
+        $illustratorAgent->writers()->attach($writerLikedId);
+        
+       
+
+        //dd($illustratorAgentId, $writerLikedId);
         
     }
   }
