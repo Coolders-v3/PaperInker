@@ -21,10 +21,16 @@ class UserSlides extends Component
     $users = User::all();
     $writers = Writer::all();
     $illustrators = Illustrator::all();
+    $illustratorAgentId = Illustrator::where('user_id', Auth::user()->id)->get()[0]->id;
+    $writerLiked = $users->where('isWriter', true)
+    ->random(1)->first()->id;
+    
 
     if ($loggedUser->isWriter) {
       $this->user = $users->where('isWriter', false)
         ->random(1)->first();
+      
+     
 
       $this->userDescription = $illustrators->where('user_id', $this->user->id)->first()
         ->personaldescription;
@@ -34,6 +40,8 @@ class UserSlides extends Component
     }
 
     if (!$loggedUser->isWriter) {
+      
+
       $this->user = $users->where('isWriter', true)
         ->random(1)->first();
 
@@ -42,6 +50,11 @@ class UserSlides extends Component
 
       $this->userImg = $writers->where('user_id', $this->user->id)->first()
         ->personalImage;
+      
+        $writerLikedId = $writers->where('user_id', $this->user->id)->first()->id;
+
+        dd($illustratorAgentId, $writerLikedId);
+        
     }
   }
 
@@ -69,4 +82,6 @@ class UserSlides extends Component
       'highlightedWork' => $this->highlightedWork
     ]);
   }
+
+ 
 }
