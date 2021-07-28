@@ -17852,3 +17852,11 @@ body.swal2-toast-shown .swal2-container.swal2-bottom-right {
   border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
   padding-left: 0.8rem;
 }
+
+.btn-find {
+  color: #fff;
+  background-color: #17a2b8;
+  border-color: #17a2b8;
+  left: 0%;
+}
+

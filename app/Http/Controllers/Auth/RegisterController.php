@@ -28,25 +28,26 @@ class RegisterController extends Controller
     |
     */
 
-  use RegistersUsers;
+
+  /*use RegistersUsers;*/
 
   /**
    * Where to redirect users after registration.
    *
    * @var string
    */
-  protected $redirectTo = RouteServiceProvider::HOME;
+ // protected $redirectTo = RouteServiceProvider::HOME;
 
   /**
    * Create a new controller instance.
    *
    * @return void
    */
-  public function __construct()
+  /*public function __construct()
   {
 
     $this->middleware('guest');
-  }
+  }*/
 
   /**
    * Get a validator for an incoming registration request.
@@ -54,7 +55,7 @@ class RegisterController extends Controller
    * @param  array  $data
    * @return \Illuminate\Contracts\Validation\Validator
    */
-  protected function validator(array $data)
+ /* protected function validator(array $data)
   {
     return Validator::make($data, [
       'name' => ['required', 'string', 'max:255'],
@@ -63,7 +64,30 @@ class RegisterController extends Controller
       'password' => ['required', 'string', 'min:8', 'confirmed'],
       'isWriter' => ['required', 'boolean']
     ]);
-  }
+  } */
+
+    use RegistersUsers;
+
+    /**
+     * Where to redirect users after registration.
+     *
+     * @var string
+     */
+
+    protected $redirectToW = RouteServiceProvider::HOME;
+
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+       
+        $this->middleware('guest');
+        
+    }
+
 
 
 
