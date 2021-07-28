@@ -75,7 +75,14 @@
             @yield('content')
         </main>
     </div>
-    @livewireScripts
+
+  </nav>
+  <main class="py-2 purplebg">
+    @yield('content')
+  </main>
+</div>
+
+@livewireScripts
 <script type="text/javascript">
 	window.livewire.on('closeModal', () => {
 		$('#exampleModal').modal('hide');

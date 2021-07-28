@@ -15,7 +15,7 @@ class IllustrationFactory extends Factory
         return [
 			'genre' => $this->faker->name(),
 			'title' => $this->faker->name(),
-			'description' => $this->faker->name(),
+			'description' => $this->faker->imageUrl(),
 			'year' => $this->faker->year(),
       'favorite'=>$this->faker->boolean(),
       ];
