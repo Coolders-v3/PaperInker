@@ -32,7 +32,6 @@ class HomeController extends Controller
 
   public function index()
   {
-
     // $loggedUser = User::auth();
     $texts = Text::where('user_id', Auth::user()->id)->get()->all();
     $illustrations = Illustration::where('user_id', Auth::user()->id)->get()->all();
@@ -46,6 +45,7 @@ class HomeController extends Controller
       return view('home', ['texts' => $texts]);
       //return view('livewire.texts.view', ['texts' => $texts]);
     }
+
     if (User::find(Auth::id())->isWriter == true && count($writers) != 0) {
       return view('home',  ['texts' => $texts]);
       //return view('livewire.texts.view', ['texts' => $texts]);
@@ -57,6 +57,7 @@ class HomeController extends Controller
       return view('home',  ['illustrations' => $illustrations]);
       //return view('livewire.illustrations.view', ['illustrations' => $illustrations]);}
     }
+
     if (User::find(Auth::id())->isWriter == false && count($illustrators) != 0) {
 
       return view('home', ['illustrations' => $illustrations]);
