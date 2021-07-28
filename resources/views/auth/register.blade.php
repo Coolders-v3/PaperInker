@@ -2,6 +2,13 @@
 
 @section('content')
 <div class="container">
+    <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0 color-body">
+        <div class="max-w-6xl mx-auto sm:px-6 lg:px-8 body-index">
+            <div class="flex justify-center  sm:pt-0 contenedor-logo-home-index">  
+                <img class="logo-home-index" src="{{ asset('images/logo-home.png') }}" alt="">
+            </div> 
+        </div> 
+    </div>           
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
