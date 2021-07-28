@@ -1,7 +1,5 @@
 
-
-<!-- <div>3
-  <section class="profile">
+ {{--  <section class="profile">
     <div class="profilePic">
       <figure>
         <img
@@ -16,4 +14,4 @@
       Tell us something about you...
     </p>
   </section>
-</div> -->
+</div>  --}}

@@ -36,7 +36,7 @@ class RegisterController extends Controller
    *
    * @var string
    */
- // protected $redirectTo = RouteServiceProvider::HOME;
+  // protected $redirectTo = RouteServiceProvider::HOME;
 
   /**
    * Create a new controller instance.
@@ -55,7 +55,30 @@ class RegisterController extends Controller
    * @param  array  $data
    * @return \Illuminate\Contracts\Validation\Validator
    */
- /* protected function validator(array $data)
+
+
+  use RegistersUsers;
+
+  /**
+   * Where to redirect users after registration.
+   *
+   * @var string
+   */
+
+  protected $redirectToW = RouteServiceProvider::HOME;
+
+  /**
+   * Create a new controller instance.
+   *
+   * @return void
+   */
+  public function __construct()
+  {
+
+    $this->middleware('guest');
+  }
+
+  protected function validator(array $data)
   {
     return Validator::make($data, [
       'name' => ['required', 'string', 'max:255'],
@@ -64,31 +87,7 @@ class RegisterController extends Controller
       'password' => ['required', 'string', 'min:8', 'confirmed'],
       'isWriter' => ['required', 'boolean']
     ]);
-  } */
-
-    use RegistersUsers;
-
-    /**
-     * Where to redirect users after registration.
-     *
-     * @var string
-     */
-
-    protected $redirectToW = RouteServiceProvider::HOME;
-
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-       
-        $this->middleware('guest');
-        
-    }
-
-
+  }
 
 
   /**
@@ -118,7 +117,7 @@ class RegisterController extends Controller
       return Writer::create(['user_id' => User::find(Auth::id())->id]);
       //return view('profileViews.writerProfile', ["texts"=>$service]);
     }
-    
+
     return Illustrator::create(['user_id' => User::find(Auth::id())->id]);
     // return view('profileViews.illustratorProfile', ["texts"=>$service]); //origanizar rutas
 
