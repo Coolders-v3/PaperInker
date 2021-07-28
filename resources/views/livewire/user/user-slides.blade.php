@@ -30,6 +30,6 @@
   </section>
   <div class="slideButtons">
     <a href="{{ url('/slides') }}"><span class="iconify likeBtn" data-icon="cil:heart" data-inline="false"></span></a>
-    <span class="iconify nextBtn" data-icon="bi:x-lg" data-inline="false"></span>
+    <a href="{{ url('/slides') }}"><span class="iconify nextBtn" data-icon="bi:x-lg" data-inline="false"></span></a>
   </div>
 @endsection
