@@ -14,25 +14,24 @@ use App\Models\Http\Livewire;
 
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+  /**
+   * Create a new controller instance.
+   *
+   * @return void
+   */
+  public function __construct()
+  {
+    $this->middleware('auth');
+  }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
-    
-    public function index()
+  /**
+   * Show the application dashboard.
+   *
+   * @return \Illuminate\Contracts\Support\Renderable
+   */
 
-    {    //$texts = Text::where('user_id', Auth::user()->id)->get()->all();
+  public function index()
+  {
 
        // $loggedUser = User::auth();
        $texts = Text::where('user_id', Auth::user()->id)->get()->all();
@@ -65,10 +64,20 @@ class HomeController extends Controller
            }
           // return view ('home');
         }
-    }
+    /*}
 
-      
+    if (User::find(Auth::id())->isWriter != true && count($illustrations) == 0) {
+
+      Illustrator::create(['user_id' => User::find(Auth::id())->id]);
+      return view('home');
+      //return view('livewire.illustrations.view', ['illustrations' => $illustrations]);}
+
+      if (User::find(Auth::id())->isWriter != true && count($illustrations) != 0) {
+
+        return view('home');
+        //return view('livewire.illustrations.view', ['illustrations' => $illustrations]);
+      }
+      return view('home');
+    }*/
+  }
 }
-
-
-

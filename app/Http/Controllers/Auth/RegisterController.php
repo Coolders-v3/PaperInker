@@ -17,7 +17,7 @@ use App\Http\Controllers;
 
 class RegisterController extends Controller
 {
-    /*
+  /*
     |--------------------------------------------------------------------------
     | Register Controller
     |--------------------------------------------------------------------------
@@ -27,6 +27,44 @@ class RegisterController extends Controller
     | provide this functionality without requiring any additional code.
     |
     */
+
+
+  /*use RegistersUsers;*/
+
+  /**
+   * Where to redirect users after registration.
+   *
+   * @var string
+   */
+ // protected $redirectTo = RouteServiceProvider::HOME;
+
+  /**
+   * Create a new controller instance.
+   *
+   * @return void
+   */
+  /*public function __construct()
+  {
+
+    $this->middleware('guest');
+  }*/
+
+  /**
+   * Get a validator for an incoming registration request.
+   *
+   * @param  array  $data
+   * @return \Illuminate\Contracts\Validation\Validator
+   */
+ /* protected function validator(array $data)
+  {
+    return Validator::make($data, [
+      'name' => ['required', 'string', 'max:255'],
+      'nickname' => ['required', 'string', 'max:255'],
+      'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+      'password' => ['required', 'string', 'min:8', 'confirmed'],
+      'isWriter' => ['required', 'boolean']
+    ]);
+  } */
 
     use RegistersUsers;
 
@@ -50,58 +88,40 @@ class RegisterController extends Controller
         
     }
 
-    /**
-     * Get a validator for an incoming registration request.
-     *
-     * @param  array  $data
-     * @return \Illuminate\Contracts\Validation\Validator
-     */
-    protected function validator(array $data)
-    {
-        return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
-            'nickname' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'isWriter' => ['required', 'boolean']
-        ]);
+
+
+
+  /**
+   * Create a new user instance after a valid registration.
+   *
+   * @param  array  $data
+   * @return \App\Models\User
+   */
+  protected function create(array $data)
+  {
+
+    return User::create([
+      'name' => $data['name'],
+      'nickname' => $data['nickname'],
+      'email' => $data['email'],
+      'nickname' => $data['nickname'],
+      'password' => Hash::make($data['password']),
+      'isWriter' => $data['isWriter']
+    ]);
+  }
+
+  protected function createProfile()
+  {
+
+    if (User::find(Auth::id())->isWriter == true) {
+
+      return Writer::create(['user_id' => User::find(Auth::id())->id]);
+      //return view('profileViews.writerProfile', ["texts"=>$service]);
     }
-
     
+    return Illustrator::create(['user_id' => User::find(Auth::id())->id]);
+    // return view('profileViews.illustratorProfile', ["texts"=>$service]); //origanizar rutas
 
-    /**
-     * Create a new user instance after a valid registration.
-     *
-     * @param  array  $data
-     * @return \App\Models\User
-     */
-    protected function create(array $data)
-    {
-
-            return User::create([
-            'name' => $data['name'],
-            'nickname' => $data['nickname'],
-            'email' => $data['email'],
-            'nickname' => $data['nickname'],
-            'password' => Hash::make($data['password']),
-            'isWriter' => $data['isWriter']
-            ]);
-            
-            
-            }
-            
-    protected function createProfile() {
-        
-                if (User::find(Auth::id())->isWriter == true) {
-        
-                        return Writer::create(['user_id' => User::find(Auth::id())->id]);
-                        //return view('profileViews.writerProfile', ["texts"=>$service]);
-                    }
-            
-                        return Illustrator::create(['user_id' => User::find(Auth::id())->id]);
-                       // return view('profileViews.illustratorProfile', ["texts"=>$service]); //origanizar rutas
-                               
-            }
-   
- 
+  }
 }
+/*  */
