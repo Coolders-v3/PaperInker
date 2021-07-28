@@ -29,3 +29,5 @@ Route::get('home', [App\Http\Controllers\HomeController::class, 'index'])->middl
 Route::view('illustrations', 'livewire.illustrations.index')->middleware('auth')->name('illustrations');
 Route::view('texts', 'livewire.texts.index')->middleware('auth')->name('texts');
 Route::get('/slides', [UserSlides::class, 'render'])->middleware('auth')->name('slides');
+Route::view('/showIllustrator', 'livewire.show-illustrator')->middleware('auth')->name('showIllustrator');
+Route::view('/showWriter', 'livewire.show-illustrator')->middleware('auth')->name('showWriter');

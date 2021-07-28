@@ -2,7 +2,7 @@
 @section('title', __('Texts'))
 <div class="container-fluid">
     @include('livewire.user.logo-user')
-    @include('livewire.user.user')
+
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
