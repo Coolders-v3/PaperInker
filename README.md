@@ -7,6 +7,7 @@
 .Composer installed
 
 ## Install
+Run the following commands on the command line:
 
 Clone the repository
 ```
