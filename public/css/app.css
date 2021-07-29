@@ -17211,7 +17211,8 @@ body.swal2-toast-shown .swal2-container.swal2-bottom-right {
 }
 
 .likeBtn,
-.nextBtn {
+.nextBtn,
+.chatBtn {
   font-size: 40px;
 }
 
@@ -17276,13 +17277,12 @@ body.swal2-toast-shown .swal2-container.swal2-bottom-right {
 
 .illustrationDetail {
   position: absolute;
-  width: 150px;
-  height: 85px;
-  left: 59px;
-  top: 717px;
+  width: 313px;
+  height: 60px;
+  left: 24px;
+  top: 377px;
   background: #FEF7F7;
   border-radius: 12px;
-  transform: matrix(1, 0, 0, -1, 0, 0);
 }
 
 /* @import 'components/writerProfile'; */
