@@ -65,7 +65,6 @@ First, was made a Sketch with Balsamic and before a design with Figma. It is als
 
     
 ## Team
-**
 - [Gaby Piñeiro](https://github.com/Gabi2606)
 - [David Hermoso](https://github.com/Davidhdm)
 - [Andrea Cevallos](https://github.com/Andreabcm)
