@@ -43,7 +43,7 @@ The system that is used is a "like" method, which allows both artists to make a 
 ***
 <ol>
 <li><a href="https://code.visualstudio.com/">Vistual Code Studio</a></li>
-<li><a href="https://www.google.com/">google</a></li>
+<li><a href="https://www.google.com/">Google</a></li>
 <li><a href="https://laravel.com/">Laravel</a></li>
 <li><a href="https://www.w3schools.com/css/">CSS</a></li>
 <li><a href="https://www.w3schools.com/html/">HTML</a></li>
@@ -53,15 +53,13 @@ The system that is used is a "like" method, which allows both artists to make a 
 <li><a href="https://trello.com/">Trello</a></li>
 <li><a href="https://www.figma.com/">Figma</a></li>
 <li><a href="https://slack.com//">Slack</a></li>    
+<li><a href="https://sass-lang.com/">SASS</a></li>
+<li><a href="https://www.heroku.com/">Heroku</a></li>
+<li><a href="https://laravel-livewire.com/">Livewire</a></li>
+<li><a href="https://balsamiq.com/">Balsamiq</a></li>
+<li><a href=https://www.php.net">PHP</a></li>     
 </ol>
 
-PHP
-
-Livewire
-SASS
-Heroku
-Balsamiq
-Slack
 
 
 ## Web
