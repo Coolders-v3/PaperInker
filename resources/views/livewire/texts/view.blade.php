@@ -16,7 +16,7 @@
                         <div>
 							<a href="{{ url('/slides') }}">
                                 <button type="button" class="btn-find" >
-                                Find your Writer!</a>
+                                Find your Illustrator!</a>
 						</div>
                         <div class="btn btn-sm btn-info" data-toggle="modal" data-target="#exampleModal">
                         <i class="fa fa-plus"></i>  Add Text
