@@ -63,15 +63,18 @@ First, was made a Sketch with Balsamic and before a design with Figma. It is als
 <li><a href=https://www.php.net">PHP</a></li>     
 </ol>
 
+    
 ## Team
-***
-    <li>!Gaby Piñeiro</li>
-    <li>!David Hermoso</li>
-    <li>!Andrés Esteban</li>
-    <li>!Berta López</li>
-    <li>!Jael Masllorens</li>
-    <li>!Andrea Cevallos</li> 
+**
+- [Gaby Piñeiro](https://github.com/Gabi2606)
+- [David Hermoso](https://github.com/Davidhdm)
+- [Andrea Cevallos](https://github.com/Andreabcm)
+- [Berta López](https://github.com/bertali)
+- [Andrés Esteban](https://github.com/AndresEstebanPatino)
+- [Jael Masllorens](https://github.com/jmasllorens)    
+- [Github Coolders](https://github.com/Coolders-v3)
 
+    
 ## Web
 ***
 ...
