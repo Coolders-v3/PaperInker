@@ -1,0 +1,19 @@
+.slideButtons {
+  position: fixed;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.likeBtn,
+.nextBtn {
+  font-size: 40px;
+}
+
+.slideBtnLinks,
+.slideBtnLinks:focus {
+  text-decoration: none;
+  color: black;
+}
