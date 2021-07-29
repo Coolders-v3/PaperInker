@@ -8,19 +8,19 @@
 
 ## Install
 
-.Installing Laravel via composer:
-composer create-project laravel/laravel example-app
+git clone https://github.com/Coolders-v3/PaperInker
 
-cd example-app
+composer install
+
+composer update
+
+npm install
+
+npm update
+
+php migrate:fresh --seed
 
 php artisan serve
-
-.Installing Laravel/ui via composer:
-composer require laravel/ui:^2.4
-
-.Installing Livewire via composer:
-composer require livewire/livewire
-
 
 ## Concept
 ***
