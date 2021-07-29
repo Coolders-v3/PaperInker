@@ -65,12 +65,12 @@ First, was made a Sketch with Balsamic and before a design with Figma. It is als
 
 ## Team
 ***
-    <li>Gaby Piñeiro</li>
-    <li>David Hermoso</li>
-    <li>Andrés Esteban</li>
-    <li>Berta López</li>
-    <li>Jael Masllorens</li>
-    <li>Andrea Cevallos</li> 
+    <li>!Gaby Piñeiro</li>
+    <li>!David Hermoso</li>
+    <li>!Andrés Esteban</li>
+    <li>!Berta López</li>
+    <li>!Jael Masllorens</li>
+    <li>!Andrea Cevallos</li> 
 
 ## Web
 ***
