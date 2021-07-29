@@ -52,19 +52,14 @@ The system that is used is a "like" method, which allows both artists to make a 
 <li><a href="https://www.apachefriends.org/index.html">XAMPP</a></li>
 <li><a href="https://trello.com/">Trello</a></li>
 <li><a href="https://www.figma.com/">Figma</a></li>
+<li><a href="https://slack.com//">Slack</a></li>    
 </ol>
 
 PHP
-CSS
-HTML
+
 Livewire
 SASS
 Heroku
-MYSQL
-Github
-XAMPP
-Trello
-Figma
 Balsamiq
 Slack
 
