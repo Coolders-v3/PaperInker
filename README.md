@@ -4,10 +4,19 @@
 
 ## Requiered
 
-...
+.PHP 7.4
+.Composer installed
 
 ## Install
 
+.Installing Laravel via composer:
+composer create-project laravel/laravel example-app
+
+cd example-app
+
+php artisan serve
+
+.Installing Livewire
 ...
 
 ## Concept
