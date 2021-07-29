@@ -40,7 +40,9 @@ That's why it is called Paperinker, because both, illustrators and writers use p
 The system that is used is a "like" method, which allows the user to "like" another user, so when both users happen to like each other, the result will be a match, sending both users an email to let them know that they connected.  
 
 ## Run Tests
+```
 php artisan test
+```
 
 ## Design
 ***
