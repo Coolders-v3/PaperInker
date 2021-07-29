@@ -1,5 +1,5 @@
-<p> 
-  <img src= "./images/paperInkerName.png">
+<p align="center"> 
+  <img src=".">
 </p>
 
 ## Requiered
@@ -16,14 +16,20 @@ cd example-app
 
 php artisan serve
 
-.Installing Livewire
-...
+.Installing Laravel/ui via composer:
+composer require laravel/ui:^2.4
+
+.Installing Livewire via composer:
+composer require livewire/livewire
+
 
 ## Concept
 ***
 
-...
-
+Paperinker is an app that whants to connect different artists in order to work together. 
+Concrately, Paperinker whants to give the opportunity to show the portfolio from different illustrators and the work of different writers in order to make an easy way for them to see each others works and projects and get in contach to work together. 
+That's why it is called paperinker, because both, illustrators and writers use paper and ink. 
+The system that is used is a "like" method, which allows both artists to make a "like" to the other artist and if it coincides the result will be a match, sending both a message throught the email in order to let them know that they connected. 
 
 ## Run Tests
 
