@@ -17256,37 +17256,33 @@ body.swal2-toast-shown .swal2-container.swal2-bottom-right {
 }
 
 .logo-user-component {
-  position: absolute;
-  width: 68px;
-  left: 13px;
-  top: 12px;
-  height: 70px;
-}
-
-.container-header-logo {
-  position: absolute;
-  width: 1340px;
-  height: 95px;
-  left: 0px;
-  top: 90px;
-  background: rgba(196, 196, 196, 0.38);
-  border-radius: 12px;
-}
-
-.img-user {
-  width: 68px;
-  height: 70px;
-  left: 45px;
-  margin-top: 100px;
-}
-
-.logo-user-component {
   max-width: 50px;
   margin-left: 10px;
 }
 
 .navbar {
   padding: 0;
+}
+
+.illustrationBox {
+  position: absolute;
+  width: 313px;
+  height: 250px;
+  left: 24px;
+  top: 107px;
+  background: #FEF7F7;
+  border-radius: 12px;
+}
+
+.illustrationDetail {
+  position: absolute;
+  width: 257px;
+  height: 85px;
+  left: 59px;
+  top: 717px;
+  background: #FEF7F7;
+  border-radius: 12px;
+  transform: matrix(1, 0, 0, -1, 0, 0);
 }
 
 /* @import 'components/writerProfile'; */

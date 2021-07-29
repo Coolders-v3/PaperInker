@@ -1,0 +1,22 @@
+.illustrationBox{
+position: absolute;
+width: 313px;
+height: 250px;
+left: 24px;
+top: 107px;
+
+background: #FEF7F7;
+border-radius: 12px;
+}
+
+.illustrationDetail{
+position: absolute;
+width: 257px;
+height: 85px;
+left: 59px;
+top: 717px;
+
+background: #FEF7F7;
+border-radius: 12px;
+transform: matrix(1, 0, 0, -1, 0, 0);
+}

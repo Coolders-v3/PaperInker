@@ -48,8 +48,8 @@ class Illustrations extends Component
 		'genre' => 'required',
 		'title' => 'required',
 		'description' => 'required',
-		'year' => 'required',
-        'favorite'=>'required'
+		'year' => 'required'
+        
         ]);
 
         Illustration::create([ 
@@ -57,8 +57,7 @@ class Illustrations extends Component
 			'title' => $this-> title,
 
 			'description' => $this-> description,
-			'year' => $this-> year,
-            'favorite'=>$this->favorite
+			'year' => $this-> year,          
 			'user_id' => User::find(Auth::id())->id //Illustrator::find(Auth::id())->id
         ]);
         
