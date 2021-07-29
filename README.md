@@ -70,7 +70,6 @@ First, was made a Sketch with Balsamic and before a design with Figma. It is als
 <li><a href="https://www.figma.com/">Figma</a></li>
 <li><a href="https://slack.com//">Slack</a></li>    
 <li><a href="https://sass-lang.com/">SASS</a></li>
-<li><a href="https://www.heroku.com/">Heroku</a></li>
 <li><a href="https://laravel-livewire.com/">Livewire</a></li>
 <li><a href="https://balsamiq.com/">Balsamiq</a></li>
 <li><a href=https://www.php.net">PHP</a></li>     
