@@ -1,7 +1,5 @@
-<img width="1413" alt="Captura de pantalla 2021-07-29 a las 16 19 42" src="https://user-images.githubusercontent.com/82206421/127508753-059ff47a-ca82-432c-a7d9-96f0699d9a8d.png">
-<p align="center"> 
-  <img src=".">
-</p>
+<img width="1422" alt="Captura de pantalla 2021-07-29 a las 16 22 56" src="https://user-images.githubusercontent.com/82206421/127509215-c444a227-4989-49ba-9a97-61407726fbe7.png">
+
 
 ## Requiered
 
