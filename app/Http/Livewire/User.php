@@ -1,18 +1,23 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace App;
+ 
+use Illuminate\Database\Eloquent\Model;
 
-use Livewire\Component;
 
-class User extends Component
+class User extends Model
 {
 
     public $personaldescription;
+    public $personalImage;
+
+    protected $fillable = ['personaldescription', 'personalImage'];
 
     public function store () 
     {
         $this->validate([
             'personaldescription' => 'required',
+            'personalImage'=> 'required'
             ]);
 
 
@@ -20,12 +25,12 @@ class User extends Component
 		    session()->flash('message', 'Personal description successfully uploaded.');
     }
 
-    public function update()
+    /* public function update()
     {
         $this->validate([
 		'personaldescription' => 'required',
         ]);
-    }
+    } */
 
     public function render()
     {

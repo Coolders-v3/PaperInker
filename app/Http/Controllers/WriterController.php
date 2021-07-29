@@ -9,7 +9,6 @@ use Illuminate\Support\Facades\Auth;
 class WriterController extends Controller
 {
 
-    public $personaldescription;
 
     /**
      * Display a listing of the resource.
@@ -82,9 +81,7 @@ class WriterController extends Controller
      */
     public function update(Request $request, Writer $writer)
     {
-        Writer::create([ 
-            'personaldescription' => $this-> personaldescription
-        ]);
+
     }
 
     /**

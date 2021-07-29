@@ -1,3 +1,6 @@
+@extends('layouts.app')
+@section('personaldescription')
+@section('content')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,21 +20,25 @@
 
 <div class="container">
 @livewire('image-upload')
+<form class="form-horizontal" method="GET">
+@foreach ($errors->all() as $error)
+    <span class="alert alert-danger">{{ $error}}</span>
+@endforeach
       <div class="form-group">
       <lavel for="personaldescription">Tell us something about you</lavel>
-      <textarea wire:model= "file" name="personaldescription" id="personaldescription" cols="30" rows="10" class="form-control"></textarea>
+      <textarea wire:model= "file" name="personaldescription" id="personaldescription" cols="30" rows="10" class="form-control" value="{{ old('personaldescription')}}"></textarea>
       </div>
       <div class="form-group">
-        <a href="{{ route ('store') }}">
-          <button type="submit" name="save-user-bio" class="btn btn-primary btn-block">
+          <button type="submit" name="save-user-bio" class="btn btn-primary btn-block" method="POST" action="{{ route('illustrations') }}"> <!-- //canviar ruta cuando esté arreglado// -->
         That's all</button>
-      </a>
-        
       </div>
+</form>
+	
+{!! csrf_field() !!}
 
-      </form>
     </div>
-  </div>
+      </div>
 </div>
 </body>
 </html>
+@endsection
