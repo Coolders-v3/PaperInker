@@ -35,6 +35,4 @@ Route::post('/home',[IllustratorController::class,'update'])->middleware('auth')
 
 Route::post('/home',[WriterController::class,'update'])->middleware('auth')->name('update');
 
-/* Route::get('/home', 'UsersInfoImageController@update');
- */
 /* Route::get('/home/edit/{id}',[UserController::class,'edit'])->middleware('auth')->name('edit'); */
