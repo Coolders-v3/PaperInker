@@ -63,9 +63,16 @@ First, was made a Sketch with Balsamic and before a design with Figma. It is als
 <li><a href=https://www.php.net">PHP</a></li>     
 </ol>
 
-
+## Team
+***
+    <li>Gaby Piñeiro</li>
+    <li>David Hermoso</li>
+    <li>Andrés Esteban</li>
+    <li>Berta López</li>
+    <li>Jael Masllorens</li>
+    <li>Andrea Cevallos</li> 
 
 ## Web
 ***
 ...
-https://crud-f5-app.herokuapp.com/?action=index
+https://github.com/Coolders-v3/PaperInker.git
