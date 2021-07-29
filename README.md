@@ -41,7 +41,23 @@ The system that is used is a "like" method, which allows both artists to make a 
 
 ## Technologies and Tools
 ***
-...
+Vistual Code Studio
+Google
+Laravel
+PHP
+CSS
+HTML
+Livewire
+SASS
+Heroku
+MYSQL
+Github
+XAMPP
+Trello
+Figma
+Balsamiq
+Slack
+
 
 ## Web
 ***
