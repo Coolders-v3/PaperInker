@@ -7,21 +7,30 @@
 .Composer installed
 
 ## Install
+Run the following commands on the command line:
 
+Clone the repository
+```
 git clone https://github.com/Coolders-v3/PaperInker
-
+```
+Install and update composer dependencies
+```
 composer install
-
 composer update
-
+```
+Install and update npm dependencies
+```
 npm install
-
 npm update
-
+```
+Refresh and fill the database with the seeder
+```
 php migrate:fresh --seed
-
+```
+Run the local host
+```
 php artisan serve
-
+```
 ## Concept
 ***
 
