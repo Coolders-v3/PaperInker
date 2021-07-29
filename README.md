@@ -41,9 +41,19 @@ The system that is used is a "like" method, which allows both artists to make a 
 
 ## Technologies and Tools
 ***
-Vistual Code Studio
-Google
-Laravel
+<ol>
+<li><a href="https://code.visualstudio.com/">Vistual Code Studio</a></li>
+<li><a href="https://www.google.com/">google</a></li>
+<li><a href="https://laravel.com/">Laravel</a></li>
+<li><a href="https://www.w3schools.com/css/">CSS</a></li>
+<li><a href="https://www.w3schools.com/html/">HTML</a></li>
+<li><a href="https://www.mysql.com/">MYSQL</a></li>
+<li><a href="https://github.com/">Github</a></li>
+<li><a href="https://www.apachefriends.org/index.html">XAMPP</a></li>
+<li><a href="https://trello.com/">Trello</a></li>
+<li><a href="https://www.figma.com/">Figma</a></li>
+</ol>
+
 PHP
 CSS
 HTML
