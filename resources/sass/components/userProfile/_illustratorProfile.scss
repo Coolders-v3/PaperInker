@@ -1,0 +1,50 @@
+    .sampleImg {
+      max-width: 150px !important;
+      border-top-right-radius: 18px !important;
+      overflow: hidden !important;
+      margin: 0px 10px !important;
+    }
+    
+    .samples {
+      display: flex !important;
+      justify-content: center !important;
+      flex-wrap: wrap !important;
+      padding: 0 !important;
+      margin: 0px auto !important;
+      margin-bottom: 12vh !important;
+      padding-top: 20px !important;
+    }
+    
+    .dropDownMenu {
+      position: relative !important;
+      bottom: 150px !important;
+      left: 122px !important;
+    }
+    
+    .dropdown-toggle {
+      border: 0 !important;
+      padding: 2px 6px 2px 6px !important;
+      background-color: rgba(255, 255, 255, 0.75) !important;
+      border-top-left-radius: 0 !important;
+      border-bottom-right-radius: 0 !important;
+      border-top-right-radius: 17px !important;
+      border-bottom-left-radius: 17px !important;
+    }
+    
+    .dropdown-toggle::after {
+      content: none !important;
+    }
+    
+    .imgMenuDots {
+      color: black !important;
+      font-size: 26px !important;
+    }
+    
+    .btn-secondary:focus,
+    .btn-secondary.focus {
+      box-shadow: none !important;
+    }
+    
+    .createBtn {
+      font-size: 60px !important;
+    }

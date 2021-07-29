@@ -1,7 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
+
 <div class="container">
+    <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0 color-body">
+        <div class="max-w-6xl mx-auto sm:px-6 lg:px-8 body-index">
+            <div class="flex justify-center  sm:pt-0 contenedor-logo-home-index">  
+                <img class="logo-home-index" src="{{ asset('images/logo-home.png') }}" alt="">
+            </div> 
+        </div> 
+    </div>           
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -45,7 +53,7 @@
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
                                     <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
+                                        {{ __('Remember me') }}
                                     </label>
                                 </div>
                             </div>
@@ -53,7 +61,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-white">
                                     {{ __('Login') }}
                                 </button>
 

@@ -1,23 +1,22 @@
 @extends('layouts.app')
-
+@section('title', __('Dashboard'))
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    {{ __('You are logged in!') }}
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+@if (Auth::user()->isWriter == true) {
+  
+    @include('livewire.texts.view', ['texts' => $texts])
+     @include('livewire.texts.create', ['texts' => $texts])
+      @include('livewire.texts.index', ['texts' => $texts])
+       @include('livewire.texts.update', ['texts' => $texts])
+      
+   
+} @elseif (Auth::user()->isWriter == false) {
+    @include('livewire.illustrations.view', ['illustrations' => $illustrations])
+      @include('livewire.illustrations.create', ['illustrations' => $illustrations])
+        @include('livewire.illustrations.index', ['illustrations' => $illustrations])
+          @include('livewire.illustrations.update', ['illustrations' => $illustrations])
+       
+}
+@endif
 @endsection
+
+

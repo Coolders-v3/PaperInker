@@ -1,8 +1,26 @@
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
-
-// Variables
 @import 'variables';
-
-// Bootstrap
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Satisfy&display=swap');
 @import '~bootstrap/scss/bootstrap';
+@import '~@fortawesome/fontawesome-free/css/all.css';
+@import '../css/app.css';
+@import '~sweetalert2/src/sweetalert2.scss';
+@import 'components/userSlides/userSlides.scss';
+@import 'components/logoUser.scss';
+
+/* @import 'components/writerProfile'; */
+
+@import 'components/home-index';
+body {
+  height: 100vh;
+  background-color: #E7E1F4;
+}
+
+#app {
+  height: 100%;
+  background: #E7E1F4;
+}
+
+.purplebg {
+  background-color: #E7E1F4;
+}

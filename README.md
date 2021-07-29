@@ -1,62 +1,93 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+<img width="1422" alt="Captura de pantalla 2021-07-29 a las 16 22 56" src="https://user-images.githubusercontent.com/82206421/127509215-c444a227-4989-49ba-9a97-61407726fbe7.png">
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
-## About Laravel
+## Requiered
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+.PHP 7.4
+.Composer installed
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Install
+Run the following commands on the command line:
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Clone the repository
+```
+git clone https://github.com/Coolders-v3/PaperInker
+```
+Install and update composer dependencies
+```
+composer install
+composer update
+```
+Install and update npm dependencies
+```
+npm install
+npm update
+```
+Refresh and fill the database with the seeder
+```
+php migrate:fresh --seed
+```
+Run the local host
+```
+php artisan serve
+```
+## Concept
+***
 
-## Learning Laravel
+Paperinker is an app whose purpose is to connect different artists in order to work together. 
+More specifically, Paperinker wants to give illustrators and writers the opportunity to show their work and portfolios in order to offer an easy way for them to see each other's work and projects and get in touch to work together. 
+That's why it is called Paperinker, because both, illustrators and writers use paper and ink. 
+The system that is used is a "like" method, which allows the user to "like" another user, so when both users happen to like each other, the result will be a match, sending both users an email to let them know that they connected.  
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Run Tests
+```
+php artisan test
+```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Design
+***
+First, was made a Sketch with Balsamic and before a design with Figma. It is also responsive. For the web application web we used SASS and Laravel's Blade and Livewire components. On the home page there is a slider with favorite jobs.
 
-## Laravel Sponsors
+![Sketch](./public/images/sketch.PNG.png)
+![Figma Home](./public/images/Figma_home.png)
+![Figma Illustrator](./public/images/Figma_illustrator.png)
+![Figma Writer](./public/images/Figma_writer.png)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
+## Technologies and Tools
+***
+<ol>
+<li><a href="https://code.visualstudio.com/">Vistual Code Studio</a></li>
+<li><a href="https://www.google.com/">Google</a></li>
+<li><a href="https://laravel.com/">Laravel</a></li>
+<li><a href="https://www.w3schools.com/css/">CSS</a></li>
+<li><a href="https://www.w3schools.com/html/">HTML</a></li>
+<li><a href="https://www.mysql.com/">MYSQL</a></li>
+<li><a href="https://github.com/">Github</a></li>
+<li><a href="https://www.apachefriends.org/index.html">XAMPP</a></li>
+<li><a href="https://trello.com/">Trello</a></li>
+<li><a href="https://www.figma.com/">Figma</a></li>
+<li><a href="https://slack.com//">Slack</a></li>    
+<li><a href="https://sass-lang.com/">SASS</a></li>
+<li><a href="https://www.heroku.com/">Heroku</a></li>
+<li><a href="https://laravel-livewire.com/">Livewire</a></li>
+<li><a href="https://balsamiq.com/">Balsamiq</a></li>
+<li><a href=https://www.php.net">PHP</a></li>     
+</ol>
 
-## Contributing
+    
+## Team
+- [Gaby Piñeiro](https://github.com/Gabi2606)
+- [David Hermoso](https://github.com/Davidhdm)
+- [Andrea Cevallos](https://github.com/Andreabcm)
+- [Berta López](https://github.com/bertali)
+- [Andrés Esteban](https://github.com/AndresEstebanPatino)
+- [Jael Masllorens](https://github.com/jmasllorens)    
+- [Github Coolders](https://github.com/Coolders-v3)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+    
+## Web
+***
+...
+https://github.com/Coolders-v3/PaperInker.git
