@@ -1,5 +1,5 @@
 <p align="center"> 
-  <img src= "img src="./images/logo-home.png">
+  <img src= "./images/paperInkerName.png">
 </p>
 
 ## Requiered
