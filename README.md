@@ -7,9 +7,9 @@
 .Composer installed
 
 ## Install
-
+```
 git clone https://github.com/Coolders-v3/PaperInker
-
+```
 composer install
 
 composer update
