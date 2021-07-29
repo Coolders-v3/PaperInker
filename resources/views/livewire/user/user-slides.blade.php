@@ -16,24 +16,28 @@
   @if (!$user->isWriter)
     <section class="illustratorSample">
       <figure>
+        <a href="{{ url('/showIllustrator') }}">
         <img src="{{ $highlightedWork->description }}" alt="">
+        </a>
       </figure>
-      <div class="imgInfo">
+      {{-- <div class="imgInfo">
         <span class="imgTitle">{{ $highlightedWork->title }}</span>
         <span class="imgGenre">{{ $highlightedWork->genre }}</span>
         <span class="imgYear">{{ $highlightedWork->year }}</span>
-      </div>
+      </div> --}}
     </section>
   @endif
 
   @if ($user->isWriter)
     <section class="writerSample">
-      <p>
-        {{ $highlightedWork->title }}<br />
+      <a href="{{ url('/showWriter') }}" >
+      <p >
+        {{-- {{ $highlightedWork->title }}<br />
         {{ $highlightedWork->genre }}<br />
-        {{ $highlightedWork->year }}<br />
+        {{ $highlightedWork->year }}<br /> --}}
         {{ $highlightedWork->description }}<br />
       </p>
+    </a>
     </section>
   @endif
 

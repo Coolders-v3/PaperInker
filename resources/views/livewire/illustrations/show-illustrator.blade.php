@@ -9,7 +9,7 @@
 <div class="illustrationDetail">
 </div>
     <div class="slideButtons">
-        <a class="slideBtnLinks" href="{{ url('/showIllustrator') }}"><span class="iconify likeBtn" data-icon="cil:heart"
+        <a class="slideBtnLinks" href="{{ url('/slides') }}"><span class="iconify likeBtn" data-icon="cil:heart"
             data-inline="false"></span></a>
         <a class="slideBtnLinks" href="{{ url('/showIllustrator') }}"><span class="iconify chatBtn" data-icon="bi:chat" data-inline="false"></span></a>
       </div>
