@@ -12,24 +12,24 @@ Clone the repository
 ```
 git clone https://github.com/Coolders-v3/PaperInker
 ```
-<hr>
+<hr/>
 Install and update composer dependencies
 ```
 composer install
 composer update
 ```
-<hr>
+<hr/>
 Install and update npm dependencies
 ```
 npm install
 npm update
 ```
-<hr>
+<hr/>
 Refresh and fill the database with the seeder
 ```
 php migrate:fresh --seed
 ```
-<hr>
+<hr/>
 Run the local host
 ```
 php artisan serve
