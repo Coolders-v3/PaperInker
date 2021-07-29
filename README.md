@@ -36,9 +36,9 @@ The system that is used is a "like" method, which allows both artists to make a 
 
 ## Design
 ***
-First, was made a Sketch with Balsamic and before a design with Figma. It is also responsive. For the web application web we used Bootstrap and Laravel's Blade components. On the home page there is a slider with favorite courses chosen by the administrator.
-![Sketch](public\img\figma.png)
-![Figma](public\img\sketch.png)
+First, was made a Sketch with Balsamic and before a design with Figma. It is also responsive. For the web application web we used SASS and Laravel's Blade and Livewire components. On the home page there is a slider with favorite jobs.
+<li>![Sketch](public\img\figma.png)</li>
+<li>![Figma](public\img\sketch.png)</li>
 
 
 
