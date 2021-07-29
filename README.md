@@ -25,10 +25,10 @@ composer require livewire/livewire
 ## Concept
 ***
 
-Paperinker is an app that whants to connect different artists in order to work together. 
-Concrately, Paperinker whants to give the opportunity to show the portfolio from different illustrators and the work of different writers in order to make an easy way for them to see each others works and projects and get in contach to work together. 
-That's why it is called paperinker, because both, illustrators and writers use paper and ink. 
-The system that is used is a "like" method, which allows both artists to make a "like" to the other artist and if it coincides the result will be a match, sending both a message throught the email in order to let them know that they connected. 
+Paperinker is an app whose purpose is to connect different artists in order to work together. 
+More specifically, Paperinker wants to give illustrators and writers the opportunity to show their work and portfolios in order to offer an easy way for them to see each other's work and projects and get in touch to work together. 
+That's why it is called Paperinker, because both, illustrators and writers use paper and ink. 
+The system that is used is a "like" method, which allows the user to "like" another user, so when both users happen to like each other, the result will be a match, sending both users an email to let them know that they connected.  
 
 ## Run Tests
 
