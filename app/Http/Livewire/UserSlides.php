@@ -14,6 +14,12 @@ class UserSlides extends Component
   public $userDescription;
   public $userImg;
   public $highlightedWork;
+  public $writerAgent;
+  public $illustratorLikedId;
+  public $writerLikedId;
+  public $illustratorAgent;
+
+  
 
   public function getRandomProfile()
   {
@@ -22,9 +28,6 @@ class UserSlides extends Component
     $writers = Writer::all();
     $illustrators = Illustrator::all();
 
- 
-
-    
 
     if ($loggedUser->isWriter) {
 
@@ -32,8 +35,8 @@ class UserSlides extends Component
 
       $this->user = $users->where('isWriter', false)
         ->random(1)->first();
-      
-     
+
+
 
       $this->userDescription = $illustrators->where('user_id', $this->user->id)->first()
         ->personaldescription;
@@ -41,19 +44,19 @@ class UserSlides extends Component
       $this->userImg = $illustrators->where('user_id', $this->user->id)->first()
         ->personalImage;
 
-        $willustratorLiked = $illustrators->where('user_id', $this->user->id)->first();
-        $illustratorLikedId = $writers->where('user_id', $this->user->id)->first()->id;
-        $writerAgent = Illustrator::where('user_id', Auth::user()->id)->first();
-        
-        $writerAgent->illustrators()->attach($illustratorLikedId);
-        
-       
+      $illustratorLiked = $illustrators->where('user_id', $this->user->id)->first();
+      $illustratorLikedId = $writers->where('user_id', $this->user->id)->first()->id;
+      $writerAgent = Illustrator::where('user_id', Auth::user()->id)->first();
 
-       // dd($writerAgentId, $illustratorLikedId);
+      $writerAgent->illustrators()->attach($illustratorLikedId);
+
+
+
+      // dd($writerAgentId, $illustratorLikedId);
     }
 
     if (!$loggedUser->isWriter) {
-      
+
       $illustratorAgentId = Illustrator::where('user_id', Auth::user()->id)->get()->first()->id;
 
       $this->user = $users->where('isWriter', true)
@@ -64,18 +67,21 @@ class UserSlides extends Component
 
       $this->userImg = $writers->where('user_id', $this->user->id)->first()
         ->personalImage;
-      
 
         $writerLiked = $writers->where('user_id', $this->user->id)->first();
         $writerLikedId = $writers->where('user_id', $this->user->id)->first()->id;
-        $illustratorAgent = Illustrator::where('user_id', Auth::user()->id)->first();
-        
-        $illustratorAgent->writers()->attach($writerLikedId);
-        
-       
+       $illustratorAgent = Illustrator::where('user_id', Auth::user()->id)->first();
 
-        //dd($illustratorAgentId, $writerLikedId);
-        
+
+       $illustratorAgent->writers()->attach($writerLikedId);
+
+    
+
+
+
+
+      //dd($illustratorAgentId, $writerLikedId);
+
     }
   }
 
@@ -106,3 +112,5 @@ class UserSlides extends Component
 
  
 }
+
+

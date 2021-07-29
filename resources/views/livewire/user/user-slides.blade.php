@@ -1,6 +1,10 @@
 @extends('layouts.app')
 @section('content')
   <div>
+  @livewireStyles
+
+@livewireScripts
+
     <section class="profile">
       <div class="profilePic">
         <figure style="max-width:50px;">
@@ -29,7 +33,8 @@
     @endif
   </section>
   <div class="slideButtons">
-    <a href="{{ url('/slides') }}"><span class="iconify likeBtn" data-icon="cil:heart" data-inline="false"></span></a>
+    <a href="{{ url('/slides') }}"><span class="iconify likeBtn" data-icon="cil:heart" data-inline="false"></span>  <button type="submit" id="btnLike" name="btnLike"></button>
+</a>
     <a href="{{ url('/slides') }}"><span class="iconify nextBtn" data-icon="bi:x-lg" data-inline="false"></span></a>
   </div>
 @endsection
