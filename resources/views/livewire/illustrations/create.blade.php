@@ -29,6 +29,7 @@
             <div>
                 <label for="favorite" type=text class="">Favorite Slider</label>
             </div>
+            
             <div class="switch-button">                
                 <input type="checkbox" name="switch-button" id="switch-label" class="switch-button__checkbox">
                 <label for="switch-label" class="switch-button__label"></label>
