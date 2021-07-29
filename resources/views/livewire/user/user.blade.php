@@ -24,13 +24,13 @@
 @foreach ($errors->all() as $error)
     <span class="alert alert-danger">{{ $error}}</span>
 @endforeach
-      <div class="form-group">
-      <lavel for="personaldescription">Tell us something about you</lavel>
-      <textarea wire:model= "file" name="personaldescription" id="personaldescription" cols="30" rows="10" class="form-control" value="{{ old('personaldescription')}}"></textarea>
+      <div class="form-group align-self-start">
+          <h5 for="personaldescription">Tell us something about you</h5>
+      <textarea wire:model= "file" name="personaldescription" id="personaldescription" cols="30" rows="10" class="form-control ml-1" value="{{ old('personaldescription')}}"></textarea>
       </div>
       <div class="form-group">
-          <button type="submit" name="save-user-bio" class="btn btn-primary btn-block" method="POST" action="{{ route('illustrations') }}"> <!-- //canviar ruta cuando esté arreglado// -->
-        That's all</button>
+          <button type="submit" name="save-user-bio" class="btn btn-primary float-lg-left" method="POST" action="{{ route('illustrations') }}"> <!-- //canviar ruta cuando esté arreglado// -->
+        Submit</button>
       </div>
 </form>
 	

@@ -31,8 +31,8 @@ Route::view('texts', 'livewire.texts.index')->middleware('auth')->name('texts');
 
 /* Route::get('/home/create',[UserController::class,'create'])->middleware('auth')-> name('create'); */
 
-Route::post('/home',[IllustratorController::class,'update'])->middleware('auth')->name('update');
+/* Route::post('/home',[IllustratorController::class,'update'])->middleware('auth')->name('update'); */
 
-Route::post('/home',[WriterController::class,'update'])->middleware('auth')->name('update');
+/* Route::post('/home',[WriterController::class,'update'])->middleware('auth')->name('update'); */
 
 /* Route::get('/home/edit/{id}',[UserController::class,'edit'])->middleware('auth')->name('edit'); */

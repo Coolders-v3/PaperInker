@@ -23,7 +23,7 @@ class IllustratorFactory extends Factory
     {
         return [
             'personaldescription' => $this->faker->text(),
-            'personalImage' => $this->faker->imageUrl()
+            'personalImage' => 'images/', $this->faker->image('public/storage/images', 640, 480, null, false)
         ];
     }
 }

@@ -4680,7 +4680,7 @@
    line-height: 1.5;
    color: #212529;
    text-align: left;
-   background-color: #f8f9fa;
+   background-color: #E7E1F4 !important;
  }
  
  [tabindex="-1"]:focus:not(:focus-visible) {
@@ -4820,6 +4820,9 @@
  img {
    vertical-align: middle;
    border-style: none;
+   margin-top: 20px;
+   width: 100px;
+   height: 100px;
  }
  
  svg {
@@ -6871,6 +6874,9 @@
  
  textarea.form-control {
    height: auto;
+   background-color: #C4C4C4;
+  border-color: #000;
+}
  }
  
  .form-group {
@@ -7254,6 +7260,9 @@
  
  .btn:not(:disabled):not(.disabled) {
    cursor: pointer;
+   background-color: #FEF7F7;
+   border-color: #000;
+   color: #000;
  }
  
  a.btn.disabled,

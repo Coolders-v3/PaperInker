@@ -8,6 +8,7 @@ use Illuminate\Database\Seeder;
 use App\Models\Writer;
 use App\Models\User;
 use App\Models\Text;
+use Illuminate\Support\Facades\Storage;
 
 class DatabaseSeeder extends Seeder
 {
@@ -23,5 +24,10 @@ class DatabaseSeeder extends Seeder
         //Illustrator::factory(5)->create();
         //Illustration::factory(5)->create();
         User::factory()->create(['email'=>'usuario@gmail.com']);
+
+        Storage::deleteDirectory('images');
+        Storage::makeDirectory('images');
+
+       \App\Models\Illustrator::factory(100)->create();
     }
 }
