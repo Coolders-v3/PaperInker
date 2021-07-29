@@ -46,10 +46,10 @@ php artisan test
 ***
 First, was made a Sketch with Balsamic and before a design with Figma. It is also responsive. For the web application web we used SASS and Laravel's Blade and Livewire components. On the home page there is a slider with favorite jobs.
 
-![Sketch](public\images\sketch.PNG.png)
-![Figma Home](public\images\Figma_home.png)
-![Figma Illustrator](public\images\Figma_illustrator.png)
-![Figma Writer](public\images\Figma_writer.png)
+![Sketch](./public/images/sketch.PNG.png)
+![Figma Home](./public/images/Figma_home.png)
+![Figma Illustrator](./public/images/Figma_illustrator.png)
+![Figma Writer](./public/images/Figma_writer.png)
 
 
 
