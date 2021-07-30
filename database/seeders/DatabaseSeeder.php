@@ -95,61 +95,61 @@ class DatabaseSeeder extends Seeder
     Writer::factory()->create([
       'user_id' => 1,
       'personaldescription' => 'writer1 description',
-      'personalImage' => 'https://upload.wikimedia.org/wikipedia/commons/c/c4/Eo_circle_red_number-1.svg'
+      'personalImage' => 'https://photos.wi.gcs.trstatic.net/91eH0cy_sdL4W9ERlE17iRoLQPuAKU_MeZ8jBHNimvD54guAPjDBZaU7zR0ZsvMHE79qA8I7vEHGE5H5HGRJHA'
     ]);
 
     Writer::factory()->create([
       'user_id' => 2,
       'personaldescription' => 'writer2 description',
-      'personalImage' => 'https://upload.wikimedia.org/wikipedia/commons/8/8f/Eo_circle_red_number-2.svg'
+      'personalImage' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5o2rTfE4y_Gle_Wyb7DV4cQ_vetOs3FhZa5SR7SRZ7y9qeTlimyB_D6n9uA3DPrwI1B8&usqp=CAU'
     ]);
 
     Writer::factory()->create([
       'user_id' => 3,
       'personaldescription' => 'writer3 description',
-      'personalImage' => 'https://upload.wikimedia.org/wikipedia/commons/6/62/Eo_circle_red_number-3.svg'
+      'personalImage' => 'https://cultivatedculture.com/wp-content/uploads/2019/12/LinkedIn-Profile-Picture-Example-Madeline-Mann.jpeg'
     ]);
 
     Writer::factory()->create([
       'user_id' => 4,
       'personaldescription' => 'writer4 description',
-      'personalImage' => 'https://upload.wikimedia.org/wikipedia/commons/c/cd/Eo_circle_red_number-4.svg'
+      'personalImage' => 'https://cdn-images.resumelab.com/authors/tom_gerencer_resumelab.jpg'
     ]);
 
     Writer::factory()->create([
       'user_id' => 5,
       'personaldescription' => 'writer5 description',
-      'personalImage' => 'https://upload.wikimedia.org/wikipedia/commons/6/68/Eo_circle_red_number-5.svg'
+      'personalImage' => 'https://attractivepartners.co.uk/wp-content/uploads/2017/06/profile.jpg'
     ]);
 
     Illustrator::factory()->create([
       'user_id' => 6,
       'personaldescription' => 'Illustrator1 description',
-      'personalImage' => 'https://upload.wikimedia.org/wikipedia/commons/f/fd/Eo_circle_blue_number-1.svg'
+      'personalImage' => 'https://www.webconsultas.com/sites/default/files/styles/foto_autor_pagina/public/autores/vanessa-fernandez.jpg'
     ]);
 
     Illustrator::factory()->create([
       'user_id' => 7,
       'personaldescription' => 'Illustrator2 description',
-      'personalImage' => 'https://upload.wikimedia.org/wikipedia/commons/5/53/Eo_circle_blue_number-2.svg'
+      'personalImage' => 'https://ta.azureedge.net/p/images/usuarios/l/quLMaJag1UjjmV-B3nt_QLGoPy2z5QL30.jpg/600x600cut/'
     ]);
 
     Illustrator::factory()->create([
       'user_id' => 8,
       'personaldescription' => 'Illustrator3 description',
-      'personalImage' => 'https://upload.wikimedia.org/wikipedia/commons/3/3e/Eo_circle_blue_number-3.svg'
+      'personalImage' => 'https://www.inboundcycle.com/hubfs/ClaraAlvarez.jpg'
     ]);
 
     Illustrator::factory()->create([
       'user_id' => 9,
       'personaldescription' => 'Illustrator4 description',
-      'personalImage' => 'https://upload.wikimedia.org/wikipedia/commons/4/45/Eo_circle_blue_number-4.svg'
+      'personalImage' => 'https://media-exp1.licdn.com/dms/image/C4E12AQGwSz8oNzs_lg/article-inline_image-shrink_1000_1488/0/1534478573026?e=1632960000&v=beta&t=IIiKJiKjkHRhksZjQ5VH07gUMSJzRXnTTs4_X5yHDlY'
     ]);
 
     Illustrator::factory()->create([
       'user_id' => 10,
       'personaldescription' => 'Illustrator5 description',
-      'personalImage' => 'https://upload.wikimedia.org/wikipedia/commons/b/ba/Eo_circle_blue_number-5.svg'
+      'personalImage' => 'https://cultivatedculture.com/wp-content/uploads/2019/12/LinkedIn-Profile-Picture-Example-Sami-Viitama%CC%88ki-.jpeg'
     ]);
 
     Text::factory()->create([
@@ -200,7 +200,7 @@ class DatabaseSeeder extends Seeder
     Illustration::factory()->create([
       'genre' => 'genre',
       'title' => 'illustrator1 art',
-      /* 'description' => 'This is an artwork made by illustrator1', */
+      'description' => 'https://lisbonparismadrid.files.wordpress.com/2021/03/leer-entre-imagenes_mockup_20.jpg?w=1024',
       'year' => '2020',
       'favorite' => true,
       'user_id' => 6,
@@ -209,7 +209,7 @@ class DatabaseSeeder extends Seeder
     Illustration::factory()->create([
       'genre' => 'genre',
       'title' => 'illustrator2 art',
-      /* 'description' => 'This is an artwork made by illustrator2', */
+      'description' => 'https://artworkcollective.com.au/wp-content/uploads/2018/09/Dream-Pink-Michele-Hall.jpg',
       'year' => '2020',
       'favorite' => true,
       'user_id' => 7,
@@ -218,7 +218,7 @@ class DatabaseSeeder extends Seeder
     Illustration::factory()->create([
       'genre' => 'genre',
       'title' => 'illustrator3 art',
-      /* 'description' => 'This is an artwork made by illustrator3', */
+      'description' => 'https://www.etapainfantil.com/wp-content/uploads/2021/05/Dibujos-Kawaii-800x491.jpg',
       'year' => '2020',
       'favorite' => true,
       'user_id' => 8,
@@ -227,7 +227,7 @@ class DatabaseSeeder extends Seeder
     Illustration::factory()->create([
       'genre' => 'genre',
       'title' => 'illustrator4 art',
-      /* 'description' => 'This is an artwork made by illustrator4', */
+      'description' => 'https://www.canvasprintsaustralia.net.au/wp-content/uploads/2015/12/THE-BRIDGES-OF-AMSTERDAM-copy.jpg',
       'year' => '2020',
       'favorite' => true,
       'user_id' => 9,
@@ -236,7 +236,7 @@ class DatabaseSeeder extends Seeder
     Illustration::factory()->create([
       'genre' => 'genre',
       'title' => 'illustrator5 art',
-      /* 'description' => 'This is an artwork made by illustrator5', */
+      'description' => 'https://lh3.googleusercontent.com/proxy/WlZyzLAaFHnR2IKsqGvzfQ42Sxdkxel1UmDwOiH7jsBmIH1rn3mrqiBBkKPpvgCUK6PskeBfYfHHeckuHn6mPHxuUnskG6N28DdZ-CknFmgidqlqe0F0rMxR7GleIOM',
       'year' => '2020',
       'favorite' => true,
       'user_id' => 10,

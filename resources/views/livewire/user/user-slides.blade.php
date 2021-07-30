@@ -18,11 +18,11 @@
       <figure>
         <img src="{{ $highlightedWork->description }}" alt="">
       </figure>
-      <div class="imgInfo">
+      {{-- <div class="imgInfo">
         <span class="imgTitle">{{ $highlightedWork->title }}</span>
         <span class="imgGenre">{{ $highlightedWork->genre }}</span>
         <span class="imgYear">{{ $highlightedWork->year }}</span>
-      </div>
+      </div> --}}
     </section>
   @endif
 
