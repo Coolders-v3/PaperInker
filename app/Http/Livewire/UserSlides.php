@@ -19,7 +19,7 @@ class UserSlides extends Component
   public $writerLikedId;
   public $illustratorAgent;
 
-  
+
 
   public function getRandomProfile()
   {
@@ -48,7 +48,7 @@ class UserSlides extends Component
       $illustratorLikedId = $writers->where('user_id', $this->user->id)->first()->id;
       $writerAgent = Illustrator::where('user_id', Auth::user()->id)->first();
 
-      $writerAgent->illustrators()->attach($illustratorLikedId);
+      // $writerAgent->illustrators()->attach($illustratorLikedId);
 
 
 
@@ -68,20 +68,37 @@ class UserSlides extends Component
       $this->userImg = $writers->where('user_id', $this->user->id)->first()
         ->personalImage;
 
-        $writerLiked = $writers->where('user_id', $this->user->id)->first();
-        $writerLikedId = $writers->where('user_id', $this->user->id)->first()->id;
-       $illustratorAgent = Illustrator::where('user_id', Auth::user()->id)->first();
+      $writerLiked = $writers->where('user_id', $this->user->id)->first();
+      $writerLikedId = $writers->where('user_id', $this->user->id)->first()->id;
+      $illustratorAgent = Illustrator::where('user_id', Auth::user()->id)->first();
 
-
-       $illustratorAgent->writers()->attach($writerLikedId);
-
-    
-
-
-
+      $illustratorAgent->writers()->attach($writerLikedId);
 
       //dd($illustratorAgentId, $writerLikedId);
 
+    }
+
+    if (!$loggedUser->isWriter && isset($_POST['btnLike'])) {
+
+      echo "select button clicked and select method should be executed";
+
+
+      $illustratorAgentId = Illustrator::where('user_id', Auth::user()->id)->get()->first()->id;
+
+      $this->user = $users->where('isWriter', true)
+        ->random(1)->first();
+
+      $this->userDescription = $writers->where('user_id', $this->user->id)->first()
+        ->personaldescription;
+
+      $this->userImg = $writers->where('user_id', $this->user->id)->first()
+        ->personalImage;
+
+      $writerLiked = $writers->where('user_id', $this->user->id)->first();
+      $writerLikedId = $writers->where('user_id', $this->user->id)->first()->id;
+      $illustratorAgent = Illustrator::where('user_id', Auth::user()->id)->first();
+
+      $illustratorAgent->writers()->attach($writerLikedId);
     }
   }
 
@@ -99,18 +116,44 @@ class UserSlides extends Component
 
   public function render()
   {
+
     $this->getRandomProfile();
     $this->getHighlightedWork();
+
 
     return view('livewire.user.user-slides', [
       'user' => $this->user,
       'userDescription' => $this->userDescription,
       'userImg' => $this->userImg,
-      'highlightedWork' => $this->highlightedWork
+      'highlightedWork' => $this->highlightedWork,
+      $this->like()
     ]);
   }
 
- 
+
+  public function like()
+  {
+
+    $writers = Writer::all();
+    $illustrators = Illustrator::all();
+    $illustratorAgent = Illustrator::where('user_id', Auth::user()->id)->first();
+    $writerLikedId = $writers->where('user_id', $this->user->id)->first()->id;
+
+
+    $illustratorAgent->writers()->attach($writerLikedId);
+  }
+
+  public function likebtn()
+  {
+    $this->getRandomProfile();
+    $this->getHighlightedWork();
+    $this->like();
+
+    $writers = Writer::all();
+    $illustrators = Illustrator::all();
+    $illustratorAgent = Illustrator::where('user_id', Auth::user()->id)->first();
+    $writerLikedId = $writers->where('user_id', $this->user->id)->first()->id;
+
+    dd($writers);
+  }
 }
-
-

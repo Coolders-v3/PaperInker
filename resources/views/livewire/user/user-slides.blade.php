@@ -1,9 +1,7 @@
 @extends('layouts.app')
 @section('content')
-  <div>
-  @livewireStyles
-
 @livewireScripts
+  <div>
 
     <section class="profile">
       <div class="profilePic">
@@ -33,8 +31,18 @@
     @endif
   </section>
   <div class="slideButtons">
-    <a href="{{ url('/slides') }}"><span class="iconify likeBtn" data-icon="cil:heart" data-inline="false"></span>  <button type="submit" id="btnLike" name="btnLike"></button>
+    <a href="{{ url('/slides') }}"><span class="iconify likeBtn" data-icon="cil:heart" data-inline="false"></span>  
 </a>
+
+<button class="btn btn-warning" wire:click='likeBtn' >LIKE</button>
+<button type="submit" name="btnLike" value="btnLike" onclick="like()">LIKE JS</button>
+
     <a href="{{ url('/slides') }}"><span class="iconify nextBtn" data-icon="bi:x-lg" data-inline="false"></span></a>
   </div>
+<script>
+function like(){
+  window.alert("Vaya proyecto macarrónico");
+}
+</script>
 @endsection
+
